@@ -1,0 +1,401 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~ FONTS ~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~ TEXTS ~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+p, span, figcaption, button {
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #0093F7;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~ GENERAL STYLE ~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+body{
+    background-image: url('../img/tile_bg.jpg');
+    background-size: contain;
+    background-attachment: fixed;
+}
+
+    header{
+        
+    }
+
+    header figure figcaption{
+        text-transform: uppercase;
+    }
+
+    div #main{
+        margin-top: 100px;
+    }
+
+        #main{
+            
+        }
+
+footer{
+    background: #030303;
+}
+
+    footer div#sitemapFT {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+        footer div#sitemapFT ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0;
+        }
+
+            footer div#sitemapFT ul li a{
+                text-transform: uppercase;
+                transition: all ease-out 0.3s;
+            }
+                footer div#sitemapFT ul li a:hover{
+                    color: #fff;
+                }
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~ INDEX ~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+@media screen and (max-width : 360px) {
+    header{
+        background-image: url('../img/showcase_bg.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+        header figure{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+            header figure a img{
+                width: 200px;
+                position: relative;
+                top: 0;
+                transition: top ease-out 0.3s;
+            }
+                header figure a img:hover{
+                    top: -5px;
+                }
+
+        header nav {
+            background-image: url('../img/tile_bg.jpg');
+            background-size: contain;
+            background-attachment: fixed;
+            width: 50%;
+            border-radius: 10px 10px 0px 0px;
+        }
+
+            header nav ul{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                padding: 0;
+                margin: 0;
+            }
+
+            header nav ul li{
+                text-align: center;
+                width: 100%;
+            }
+
+            header nav ul li a{
+                display: inline-block;
+                color: #141414;
+                transition: all ease-out 0.3s;
+                text-transform: uppercase;
+                font-size: 2em;
+                width: 100%;
+                background: transparent;
+                padding: 5px 0px 5px 0px;
+            }
+
+            header nav ul li a:hover{
+                color: #0093F7;
+                background: rgba(014,014,014,0.05);
+            }
+
+    #main section article{
+        padding: 25px 5px 50px 5px;
+    }
+
+    h1, h2, h3, h4, h5, h6, p, p, span, figcaption, button {color: #141414;}
+
+        #main section article h2, #main section article h1{
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        #main section article.imgTxtButton div.blockImgTxtButton {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+            #main section article.imgTxtButton div.blockImgTxtButton .img a img{
+                width: 300px;
+            }
+
+            #main section article.imgTxtButton div.blockImgTxtButton .txtButton{
+                   padding: 25px;
+                width: 50%;
+            }
+
+                #main section article.imgTxtButton div.blockImgTxtButton .txtButton a button{
+                    background: transparent;
+                    padding: 15px;
+                    border: 1px solid #fff;
+                    transition: all ease-out 0.3s;
+                }
+
+                    #main section article.imgTxtButton div.blockImgTxtButton .txtButton a button:hover{
+                        background: #0093F7;
+                        padding: 15px;
+                        border: 1px solid #0093F7;
+                    }
+
+        #main section article.topProduits div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0px 50px 0px 50px;
+        }
+
+            #main section article.topProduits div a{
+                width: 350px;
+                border: 2px #fff solid;
+                box-shadow: 0px 0px 0px 0px transparent;
+                position: relative;
+                top: 0;
+                transition: all ease-out 0.3s;
+            }
+
+                #main section article.topProduits div a:hover{
+                    box-shadow: 0px 5px 10px 2px #0093f788;
+                    top: -5px;
+                }
+
+                 #main section article.topProduits div a div#product-1, #main section article.topProduits div a div#product-2, #main section article.topProduits div a div#product-3{
+                    height: 300px;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: top;
+                    padding: 0px;
+                }
+
+                    #main section article.topProduits div a div#product-1{
+                        background-image: url(../img/yoda-kenner-1978.jpg);
+                    }
+                    #main section article.topProduits div a div#product-2{
+                        background-image: url(../img/GeForce-RTX-3080Ti.jpg);
+                    }
+                    #main section article.topProduits div a div#product-3{
+                        background-image: url(../img/hitchhiker_s_guide_to_the_galaxy-replica.jpg);
+                    }
+
+                    #main section article.topProduits div a div.infoProd{
+                        padding: 5px 10px 5px 10px;
+                        background-color: #141414;
+                    }
+
+                    #main section article.topProduits div a p.descriProd{
+                        padding: 5px 15px 5px 15px;
+                        text-align: justify;
+                    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width : 360px) {
+    header{
+        background-image: url('../img/showcase_bg.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+        header figure{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+            header figure a img{
+                width: 200px;
+                position: relative;
+                top: 0;
+                transition: top ease-out 0.3s;
+            }
+                header figure a img:hover{
+                    top: -5px;
+                }
+
+        header nav {
+            background-image: url('../img/tile_bg.jpg');
+            background-size: contain;
+            background-attachment: fixed;
+            width: 50%;
+            border-radius: 10px 10px 0px 0px;
+        }
+
+            header nav ul{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                padding: 0;
+                margin: 0;
+            }
+
+            header nav ul li{
+                text-align: center;
+                width: 100%;
+            }
+
+            header nav ul li a{
+                display: inline-block;
+                color: #141414;
+                transition: all ease-out 0.3s;
+                text-transform: uppercase;
+                font-size: 2em;
+                width: 100%;
+                background: transparent;
+                padding: 5px 0px 5px 0px;
+            }
+
+            header nav ul li a:hover{
+                color: #0093F7;
+                background: rgba(014,014,014,0.05);
+            }
+
+
+        #main{
+            width: 80%;
+            margin-top: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            background-image: url('../img/showcase_bg.png');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+
+            #main section {
+
+            }
+
+            #main section article{
+                padding: 25px 50px 50px 25px;
+            }
+
+            #main section article h2, #main section article h1{
+                text-align: center;
+                margin-bottom: 50px;
+            }
+
+            #main section article.imgTxtButton div.blockImgTxtButton {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+            }
+
+                #main section article.imgTxtButton div.blockImgTxtButton .txtButton{
+                    padding: 25px;
+                    width: 50%;
+                }
+
+                    #main section article.imgTxtButton div.blockImgTxtButton .txtButton a button{
+                        background: transparent;
+                        padding: 15px;
+                        border: 1px solid #fff;
+                        transition: all ease-out 0.3s;
+                    }
+
+                        #main section article.imgTxtButton div.blockImgTxtButton .txtButton a button:hover{
+                            background: #0093F7;
+                            padding: 15px;
+                            border: 1px solid #0093F7;
+                        }
+
+            #main section article.topProduits div {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content:space-around;
+                padding: 0px 50px 0px 50px;
+            }
+
+                #main section article.topProduits div a{
+                    width: 350px;
+                    border: 2px #fff solid;
+                    box-shadow: 0px 0px 0px 0px transparent;
+                    position: relative;
+                    top: 0;
+                    transition: all ease-out 0.3s;
+                }
+
+                    #main section article.topProduits div a:hover{
+                        box-shadow: 0px 5px 10px 2px #0093f788;
+                        top: -5px;
+                    }
+
+                    #main section article.topProduits div a div#product-1, #main section article.topProduits div a div#product-2, #main section article.topProduits div a div#product-3{
+                        height: 300px;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: top;
+                        padding: 0px;
+                    }
+
+                        #main section article.topProduits div a div#product-1{
+                            background-image: url(../img/yoda-kenner-1978.jpg);
+                        }
+                        #main section article.topProduits div a div#product-2{
+                            background-image: url(../img/GeForce-RTX-3080Ti.jpg);
+                        }
+                        #main section article.topProduits div a div#product-3{
+                            background-image: url(../img/hitchhiker_s_guide_to_the_galaxy-replica.jpg);
+                        }
+
+                    #main section article.topProduits div a div.infoProd{
+                        padding: 5px 10px 5px 10px;
+                        background-color: #141414;
+                    }
+
+                    #main section article.topProduits div a p.descriProd{
+                        padding: 5px 15px 5px 15px;
+                        text-align: justify;
+                    }
+    footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
