@@ -8,7 +8,13 @@ h1, h2, h3, h4, h5, h6 {
     font-family: Arial, sans-serif;
     color: #fff;
     text-transform: uppercase;
+    text-shadow: 1px 0px 5px #0093f7, 1px 1px 5px #0093f7, 0px 1px 5px #0093f7, -1px 0px 5px #0093f7, -1px -1px 5px #0093f7, 0px -1px 5px #0093f7;
 }
+
+h1{font-size: 2em; font-weight: 800;}
+h2{font-size: 1.8em;font-weight: 700;}
+h3{font-size: 1.6em;font-weight: 600;}
+h4{font-size: 1.4em;font-weight: 500;}
 
 p, span, figcaption, button {
     font-family: Arial, sans-serif;
@@ -27,7 +33,13 @@ a{
         text-decoration: none;
     }
 
-/*~~~~~~~~~~~~~~~~~~~~~~~~ GENERAL STYLE ~~~~~~~~~~~~~~~~~~~~~~~~*/
+strong {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #0093f7;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~ GENERAL STYLE RESPONSIVE OR NOT ~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 body{
     background-image: url('../img/tile_bg.jpg');
@@ -63,10 +75,6 @@ body{
         margin-top: 100px;
     }
 
-        #main{
-            
-        }
-
 footer{
     background: #030303;
 }
@@ -93,16 +101,19 @@ footer{
                 footer div#sitemapFT ul li a:hover{
                     color: #fff;
                 }
-
-/*~~~~~~~~~~~~~~~~~~~~~~~~ INDEX ~~~~~~~~~~~~~~~~~~~~~~~~*/
-
+/*~~~~~~~~~~~~~~~~~~~~~~~~ RESPONSIVE HEADER FOOTER MAIN CONTAINER TEL ~~~~~~~~~~~~~~~~~~~~~~~~*/
 @media screen and (max-width : 360px) {
+    
+/*HEADER CSS INDENTED AS HTML*/
+
+    /*LOGO CSS*/
     header figure figcaption{
         font-size: 1.1em;
         text-align: center;
         color: #fff;
     }
 
+    /*NAV CSS INDENTED AS HTML*/
     .navbar-inverse {
         background: transparent !important;
         border-color: #080808;
@@ -198,6 +209,8 @@ footer{
                     background: rgba(014,014,014,0.05) !important;
                 }
 
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~ FIN HEADER ~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
     #main section article{
         padding: 25px 5px 50px 5px;
     }
@@ -207,83 +220,11 @@ footer{
         #main section article h2, #main section article h1{
             text-align: center;
             margin-bottom: 50px;
+            color: #fff;
         }
 
-        #main section article.imgTxtButton div.blockImgTxtButton {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-            #main section article.imgTxtButton div.blockImgTxtButton .img a img{
-                width: 300px;
-            }
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~ DEBUT FOOTER ~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-            #main section article.imgTxtButton div.blockImgTxtButton .txtButton{
-                padding: 25px;
-                font-size: 1.2em;
-                width: auto;
-                color: #000;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-
-                #main section article.imgTxtButton div.blockImgTxtButton .txtButton a button{
-                    background: #0093F7;
-                    padding: 15px;
-                    font-size: 1.2em;
-                    border: 1px solid #0093F7;
-                    color: #fff;
-                }
-
-        #main section article.topProduits div {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-            #main section article.topProduits div a{
-                width: 350px;
-                border: 5px #0093F7 solid;
-                margin: 15px 0 15px 0;
-            }
-
-                 #main section article.topProduits div a div#product-1, #main section article.topProduits div a div#product-2, #main section article.topProduits div a div#product-3{
-                    height: 300px;
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    background-position: top;
-                    padding: 0px;
-                }
-
-                    #main section article.topProduits div a div#product-1{
-                        background-image: url(../img/yoda-kenner-1978.jpg);
-                    }
-                    #main section article.topProduits div a div#product-2{
-                        background-image: url(../img/GeForce-RTX-3080Ti.jpg);
-                    }
-                    #main section article.topProduits div a div#product-3{
-                        background-image: url(../img/hitchhiker_s_guide_to_the_galaxy-replica.jpg);
-                    }
-
-                    #main section article.topProduits div a div.infoProd{
-                        padding: 5px 10px 5px 10px;
-                        font-size: 1.2em;
-                        background-color: #141414;
-                        text-align: center;
-                    }
-
-                    #main section article.topProduits div a div.infoProd p, #main section article.topProduits div a div.infoProd h3{
-                        color: #fff;
-                    }
-
-                    #main section article.topProduits div a p.descriProd{
-                        padding: 10px 20px 10px 20px;
-                        font-size: 1.2em;
-                        text-align: justify;
-                        background: #ffffffaa;
-                        margin: 0;
-                    }
     footer{
         display: flex;
         flex-direction: column;
@@ -306,8 +247,10 @@ footer{
                     color: #0093F7;
                 }
 }
-
+/*~~~~~~~~~~~~~~~~~~~~~~~~ RESPONSIVE HEADER FOOTER MAIN CONTAINER AU DESSUS TEL ~~~~~~~~~~~~~~~~~~~~~~~~*/
 @media screen and (min-width : 360px) {
+/*HEADER CSS INDENTED AS HTML*/
+    /*LOGO CSS*/
     header figure a img{
         position: relative;
         top: 0;
@@ -317,6 +260,7 @@ footer{
             top: -5px;
         }
         
+        /*NAV CSS INDENTED AS HTML*/
         .navbar-static-top {
             border-width: 0 0 0;
         }
@@ -381,7 +325,7 @@ footer{
                         color: #0093F7 !important;
                         background: rgba(014,014,014,0.05) !important;
                     }
-
+/*~~~~~~~~~~~~ FIN HEADER ~~~~~~~~~~~~*/
 
         #main{
             width: 80%;
@@ -402,30 +346,131 @@ footer{
                 margin-bottom: 50px;
             }
 
-            #main section article.imgTxtButton div.blockImgTxtButton {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: center;
+/*~~~~~~~~~~~~ DEBUT FOOTER ~~~~~~~~~~~~*/
+
+    footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~ INDEX CSS INDENTED AS HTML ~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+@media screen and (max-width : 360px) {
+
+    #main section article.imgTxtButton div.blockImgTxtButton {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+        #main section article.imgTxtButton div.blockImgTxtButton .img a img{
+            width: 300px;
+        }
+
+        #main section article.imgTxtButton div.blockImgTxtButton .txtButton{
+            padding: 25px;
+            font-size: 1.2em;
+            width: auto;
+            color: #000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+            #main section article.imgTxtButton div.blockImgTxtButton .txtButton a{
+                font-size: 1.2em;
+                background-color: #0093F7;
+                padding: 10px 20px;
+                color: #fff;
+                display: inline-block;
+                margin-top: 15px;
             }
 
-                #main section article.imgTxtButton div.blockImgTxtButton .txtButton{
-                    padding: 25px;
-                    width: 50%;
+        #main section article.topProduits div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+            #main section article.topProduits div a{
+                width: 350px;
+                border: 5px #0093F7 solid;
+                margin: 15px 0 15px 0;
+            }
+
+                 #main section article.topProduits div a div#product-1, #main section article.topProduits div a div#product-2, #main section article.topProduits div a div#product-3{
+                    height: 300px;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: top;
+                    padding: 0px;
                 }
 
-                    #main section article.imgTxtButton div.blockImgTxtButton .txtButton a button{
-                        background: transparent;
-                        padding: 15px;
-                        border: 1px solid #fff;
-                        transition: all ease-out 0.3s;
+                    #main section article.topProduits div a div#product-1{
+                        background-image: url(../img/yoda-kenner-1978.jpg);
+                    }
+                    #main section article.topProduits div a div#product-2{
+                        background-image: url(../img/GeForce-RTX-3080Ti.jpg);
+                    }
+                    #main section article.topProduits div a div#product-3{
+                        background-image: url(../img/hitchhiker_s_guide_to_the_galaxy-replica.jpg);
                     }
 
-                        #main section article.imgTxtButton div.blockImgTxtButton .txtButton a button:hover{
-                            background: #0093F7;
-                            padding: 15px;
-                            border: 1px solid #0093F7;
-                        }
+                    #main section article.topProduits div a div.infoProd{
+                        padding: 5px 10px 5px 10px;
+                        font-size: 1.2em;
+                        background-color: #141414;
+                        text-align: center;
+                    }
+
+                    #main section article.topProduits div a div.infoProd p, #main section article.topProduits div a div.infoProd h3{
+                        color: #fff;
+                    }
+
+                    #main section article.topProduits div a div.infoProd h3{
+                        font-size: 1.4em;
+                    }
+
+                    #main section article.topProduits div a p.descriProd{
+                        padding: 10px 20px 10px 20px;
+                        font-size: 1.2em;
+                        text-align: justify;
+                        background: #ffffffaa;
+                        margin: 0;
+                    }
+}
+
+@media screen and (min-width : 360px) {
+
+    #main section article.imgTxtButton div.blockImgTxtButton {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+         #main section article.imgTxtButton div.blockImgTxtButton .txtButton{
+            padding: 25px;
+            width: 50%;
+        }
+
+            #main section article.imgTxtButton div.blockImgTxtButton .txtButton a{
+                font-size: 1.2em;
+                border: 1px solid #fff;
+                padding: 10px 20px;
+                color: #fff;
+                transition: all ease-out 0.3s;
+                display: inline-block;
+                margin-top: 15px;
+            }
+
+                #main section article.imgTxtButton div.blockImgTxtButton .txtButton a:hover{
+                    background: #0093F7;
+                    color: #fff;
+                    border: 1px solid #0093F7;
+                }
 
             #main section article.topProduits div {
                 display: flex;
@@ -472,14 +517,342 @@ footer{
                         background-color: #141414;
                     }
 
+                        #main section article.topProduits div a div.infoProd h3{
+                            font-size: 1.4em;
+                        }
+
                     #main section article.topProduits div a p.descriProd{
                         padding: 5px 15px 5px 15px;
                         text-align: justify;
                     }
-    footer{
+
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~ ABOUT PAGE CSS INDENTED AS HTML ~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+@media screen and (max-width : 360px) {
+    article.aboutImgTxt .aboutImg{
+        height: 250px;
+        background-image: url(../img/terreDeGeek-shop.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    article.aboutImgTxt .aboutTxt{
+        width: 80%;
+        margin: 50px auto;
+    }
+        article.aboutImgTxt .aboutTxt p {
+            text-align: justify;
+        }
+        article.aboutImgTxt .aboutTxt h3 {
+            text-align: center;
+            margin: 25px 0 25px 0;
+            color: #fff;
+        }
+}
+
+@media screen and (min-width : 360px) {
+    article.aboutImgTxt .aboutImg{
+        height: 500px;
+        background-image: url('../img/terreDeGeek-shop.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    article.aboutImgTxt .aboutTxt{
+        width: 80%;
+        margin: 50px auto;
+    }
+        article.aboutImgTxt .aboutTxt p {
+            text-align: justify;
+        }
+        article.aboutImgTxt .aboutTxt h3 {
+            text-align: center;
+            margin: 25px 0 25px 0;
+        }
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~ PRODUCTS PAGE CSS INDENTED AS HTML ~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+@media screen and (max-width : 360px) {
+    section#productPage {
+        padding: 50px 0px;
+    }
+
+        section#productPage h1{
+            text-align: center;
+            color: #fff;
+        }
+
+        section#productPage #listProduct{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section#productPage #listProduct article.productUnit a.productMini{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #141414;
+            border: 2px #fff solid;
+        }
+
+        /*Chaque article*/
+        section#productPage #listProduct article.productUnit a.productMini div#product-1, section#productPage #listProduct article.productUnit a.productMini div#product-2, section#productPage #listProduct article.productUnit a.productMini div#product-3{
+            height: 30em;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top;
+            padding: 0px;
+        }
+
+            section#productPage #listProduct article.productUnit a.productMini div#product-1{
+                background-image: url(../img/yoda-kenner-1978.jpg);
+            }
+            section#productPage #listProduct article.productUnit a.productMini div#product-2{
+                background-image: url(../img/GeForce-RTX-3080Ti.jpg);
+            }
+            section#productPage #listProduct article.productUnit a.productMini div#product-3{
+                background-image: url(../img/hitchhiker_s_guide_to_the_galaxy-replica.jpg);
+            }
+
+        section#productPage #listProduct article.productUnit a.productMini .contInfos{
+            flex: 1;
+            padding: 0 25px 25px 25px;
+        }
+
+            section#productPage #listProduct article.productUnit a.productMini .contInfos .infoProd{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 50px;
+            }
+
+                section#productPage #listProduct article.productUnit a.productMini .contInfos .infoProd h3{
+                    color: #fff;
+                }
+
+                section#productPage #listProduct article.productUnit a.productMini .contInfos .infoProd p{
+                    color: #fff;
+                    font-size: 1.5em;
+                    text-shadow: 1px 0px 5px #0093f7, 1px 1px 5px #0093f7, 0px 1px 5px #0093f7, -1px 0px 5px #0093f7, -1px -1px 5px #0093f7, 0px -1px 5px #0093f7;
+                }
+
+        section#productPage #listProduct article.productUnit a.productMini .contInfos p{
+            color: #fff;
+        }
+}
+
+@media screen and (min-width : 360px) {
+    section#productPage {
+        padding: 50px 25px;
+    }
+
+        section#productPage h1{
+            text-align: center;
+        }
+
+        section#productPage #listProduct{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section#productPage #listProduct article.productUnit a.productMini{
+            display: flex;
+            flex-direction: row;
+            justify-content:space-between;
+            align-items: center;
+            background: #141414;
+            border: 2px #fff solid;
+            box-shadow: 0px 0px 0px 0px transparent;
+            position: relative;
+            left: 0;
+            transition: all ease-out 0.3s;
+        }
+
+        section#productPage #listProduct article.productUnit a:hover{
+                box-shadow: 5px 0px 10px 2px #0093f788;
+                left: 5px;
+            }
+
+
+        /*Chaque article*/
+        section#productPage #listProduct article.productUnit a.productMini div#product-1, section#productPage #listProduct article.productUnit a.productMini div#product-2, section#productPage #listProduct article.productUnit a.productMini div#product-3{
+            height: 30em;
+            flex: 1;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top;
+            padding: 0px;
+        }
+
+            section#productPage #listProduct article.productUnit a.productMini div#product-1{
+                background-image: url(../img/yoda-kenner-1978.jpg);
+            }
+            section#productPage #listProduct article.productUnit a.productMini div#product-2{
+                background-image: url(../img/GeForce-RTX-3080Ti.jpg);
+            }
+            section#productPage #listProduct article.productUnit a.productMini div#product-3{
+                background-image: url(../img/hitchhiker_s_guide_to_the_galaxy-replica.jpg);
+            }
+
+        section#productPage #listProduct article.productUnit a.productMini .contInfos{
+            flex: 1;
+            padding: 0 25px;
+        }
+
+            section#productPage #listProduct article.productUnit a.productMini .contInfos .infoProd{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 50px;
+            }
+
+                section#productPage #listProduct article.productUnit a.productMini .contInfos .infoProd p{
+                    font-size: 1.5em;
+                    text-shadow: 1px 0px 5px #0093f7, 1px 1px 5px #0093f7, 0px 1px 5px #0093f7, -1px 0px 5px #0093f7, -1px -1px 5px #0093f7, 0px -1px 5px #0093f7;
+                }
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~ SINGLE PRODUCT PAGE CSS INDENTED AS HTML ~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+@media screen and (max-width : 360px) {
+    article.productAlone{
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        flex-direction: column;
         align-items: center;
     }
+
+        article.productAlone div.articleList{
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+            width: 100%;
+        }
+
+            article.productAlone div.articleList #galerie{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+                width: 100%;
+            }
+
+                article.productAlone div.articleList #galerie figure.productPic{
+                    width: 100%;
+                }
+
+                    article.productAlone div.articleList #galerie figure.productPic img{
+                        width: 100%;
+                    }
+
+            article.productAlone div.articleList #detailsProduit{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+                article.productAlone div.articleList #detailsProduit h2{
+                    text-align: center;
+                }
+
+                article.productAlone div.articleList #detailsProduit .infoPrix{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    margin-bottom: 50px;
+                }
+
+                article.productAlone div.articleList #detailsProduit .infoPrix .detailsProd{
+                    flex: 2;
+                    padding: 0 25px;
+                }
+
+                    article.productAlone div.articleList #detailsProduit .infoPrix .detailsProd h4, article.productAlone div.articleList #detailsProduit .infoPrix .detailsProd p{
+                        margin-bottom: 25px;
+                    }
+
+                    article.productAlone div.articleList #detailsProduit .infoPrix .detailsProd ul{
+                        list-style: inside;
+                        color: #141414;
+                        font-size: 1.3em;
+                    }
+
+                article.productAlone div.articleList #detailsProduit .infoPrix .prixProd{
+                    flex: 1;
+                    padding: 0 25px;
+                }
+
+                    article.productAlone div.articleList #detailsProduit .infoPrix .prixProd p{
+                        font-size: 3.5em;
+                    }
+}
+
+@media screen and (min-width : 360px) {
+    article.productAlone{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+        article.productAlone div.articleList{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+            article.productAlone div.articleList #galerie{
+                flex: 1;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            article.productAlone div.articleList #detailsProduit{
+                flex: 1;
+            }
+
+                article.productAlone div.articleList #detailsProduit h2{
+                    text-align: left;
+                }
+
+                article.productAlone div.articleList #detailsProduit .infoPrix{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                }
+
+                article.productAlone div.articleList #detailsProduit .infoPrix .detailsProd{
+                    flex: 2;
+                    padding: 0 25px;
+                }
+
+                    article.productAlone div.articleList #detailsProduit .infoPrix .detailsProd h4, article.productAlone div.articleList #detailsProduit .infoPrix .detailsProd p{
+                        margin-bottom: 25px;
+                    }
+
+                    article.productAlone div.articleList #detailsProduit .infoPrix .detailsProd ul{
+                        list-style: inside;
+                        color: white;
+                        font-size: 1.3em;
+                    }
+
+                article.productAlone div.articleList #detailsProduit .infoPrix .prixProd{
+                    flex: 1;
+                    padding: 0 25px;
+                }
+
+                    article.productAlone div.articleList #detailsProduit .infoPrix .prixProd p{
+                        font-size: 3.5em;
+                    }
 }
