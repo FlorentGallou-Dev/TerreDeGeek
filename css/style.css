@@ -23,6 +23,9 @@ a{
     text-decoration: none;
     color: #0093F7;
 }
+    a:hover{
+        text-decoration: none;
+    }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~ GENERAL STYLE ~~~~~~~~~~~~~~~~~~~~~~~~*/
 
@@ -33,12 +36,28 @@ body{
 }
 
     header{
-        
+        background-image: url('../img/showcase_bg.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    header figure figcaption{
-        text-transform: uppercase;
-    }
+        header figure{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+            header figure a img{
+                width: 200px;
+            }
+
+            header figure figcaption{
+                text-transform: uppercase;
+                margin-bottom: 15px;
+            }
 
     div #main{
         margin-top: 100px;
@@ -78,66 +97,106 @@ footer{
 /*~~~~~~~~~~~~~~~~~~~~~~~~ INDEX ~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 @media screen and (max-width : 360px) {
-    header{
-        background-image: url('../img/showcase_bg.png');
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    header figure figcaption{
+        font-size: 1.1em;
+        text-align: center;
+        color: #fff;
     }
-        header figure{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+
+    .navbar-inverse {
+        background: transparent !important;
+        border-color: #080808;
+    }
+    .navbar-static-top {
+        border-width: 0 0 0;
+    }
+
+    .navbar {
+        min-height: auto;
+        margin: 10px 0 0 0;
+        border: 0px !important;
+    }
+
+    header nav {
+        background-image: url('../img/tile_bg.jpg');
+        background-size: contain;
+        background-attachment: fixed;
+        width: 50%;
+        border-radius: 10px 10px 0px 0px !important;
+    }
+
+        .container {
+            padding-right: 0px;
+            padding-left: 0px;
+            margin-right: 0px;
+            margin-left: 0px;
+            width: auto;
         }
 
-            header figure a img{
-                width: 200px;
-                position: relative;
-                top: 0;
-                transition: top ease-out 0.3s;
-            }
-                header figure a img:hover{
-                    top: -5px;
-                }
-
-        header nav {
-            background-image: url('../img/tile_bg.jpg');
-            background-size: contain;
-            background-attachment: fixed;
-            width: 50%;
-            border-radius: 10px 10px 0px 0px;
-        }
-
-            header nav ul{
+            .navbar-header {
+                float:initial;
+                margin: 0 0 10px 0 !important;
                 display: flex;
                 flex-direction: row;
-                justify-content: space-around;
-                padding: 0;
-                margin: 0;
+                align-items: center;
+                justify-content: center;
             }
+                .navbar-inverse .navbar-toggle {
+                    border:0 !important;
+                    background: #ffffff88 !important;
+                    float: initial;
+                    padding: 9px 10px;
+                    margin-top: 0;
+                    margin-right: 0;
+                    margin-bottom: 10px;
+                    border-radius: 0;
+                }
+                .navbar-inverse .navbar-collapse {
+                    border-color: transparent;
+                    background-image: url('../img/tile_bg.jpg');
+                    background-size: contain;
+                    background-attachment: fixed;
+                    border-radius: 5px 5px 0 0;
+                }
+                    .navbar-inverse .navbar-toggle:hover {
+                        background-color: #0093F7 !important;
+                    }
 
-            header nav ul li{
-                text-align: center;
-                width: 100%;
-            }
+                .navbar-nav {
+                    float: initial;
+                }
+                header nav ul{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 0;
+                    margin: 0;
+                }
 
-            header nav ul li a{
-                display: inline-block;
-                color: #141414;
-                transition: all ease-out 0.3s;
-                text-transform: uppercase;
-                font-size: 2em;
-                width: 100%;
-                background: transparent;
-                padding: 5px 0px 5px 0px;
-            }
+                .navbar-nav>li {
+                    float: initial;
+                }
+                header nav ul li{
+                    text-align: center;
+                    width: 100%;
+                }
 
-            header nav ul li a:hover{
-                color: #0093F7;
-                background: rgba(014,014,014,0.05);
-            }
+                header nav ul li a{
+                    display: inline-block !important;
+                    color: #141414 !important;
+                    transition: all ease-out 0.3s;
+                    text-transform: uppercase;
+                    font-size: 2em;
+                    width: 100%;
+                    background: transparent;
+                    padding: 10px 0px 10px 0px !important;
+                    line-height: initial !important;
+                }
+
+                header nav ul li a:hover{
+                    color: #0093F7 !important;
+                    background: rgba(014,014,014,0.05) !important;
+                }
 
     #main section article{
         padding: 25px 5px 50px 5px;
@@ -160,43 +219,34 @@ footer{
             }
 
             #main section article.imgTxtButton div.blockImgTxtButton .txtButton{
-                   padding: 25px;
-                width: 50%;
+                padding: 25px;
+                font-size: 1.2em;
+                width: auto;
+                color: #000;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
             }
 
                 #main section article.imgTxtButton div.blockImgTxtButton .txtButton a button{
-                    background: transparent;
+                    background: #0093F7;
                     padding: 15px;
-                    border: 1px solid #fff;
-                    transition: all ease-out 0.3s;
+                    font-size: 1.2em;
+                    border: 1px solid #0093F7;
+                    color: #fff;
                 }
-
-                    #main section article.imgTxtButton div.blockImgTxtButton .txtButton a button:hover{
-                        background: #0093F7;
-                        padding: 15px;
-                        border: 1px solid #0093F7;
-                    }
 
         #main section article.topProduits div {
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 0px 50px 0px 50px;
         }
 
             #main section article.topProduits div a{
                 width: 350px;
-                border: 2px #fff solid;
-                box-shadow: 0px 0px 0px 0px transparent;
-                position: relative;
-                top: 0;
-                transition: all ease-out 0.3s;
+                border: 5px #0093F7 solid;
+                margin: 15px 0 15px 0;
             }
-
-                #main section article.topProduits div a:hover{
-                    box-shadow: 0px 5px 10px 2px #0093f788;
-                    top: -5px;
-                }
 
                  #main section article.topProduits div a div#product-1, #main section article.topProduits div a div#product-2, #main section article.topProduits div a div#product-3{
                     height: 300px;
@@ -218,81 +268,119 @@ footer{
 
                     #main section article.topProduits div a div.infoProd{
                         padding: 5px 10px 5px 10px;
+                        font-size: 1.2em;
                         background-color: #141414;
+                        text-align: center;
+                    }
+
+                    #main section article.topProduits div a div.infoProd p, #main section article.topProduits div a div.infoProd h3{
+                        color: #fff;
                     }
 
                     #main section article.topProduits div a p.descriProd{
-                        padding: 5px 15px 5px 15px;
+                        padding: 10px 20px 10px 20px;
+                        font-size: 1.2em;
                         text-align: justify;
+                        background: #ffffffaa;
+                        margin: 0;
                     }
     footer{
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 25px;
     }
+
+        footer div {
+            margin-bottom: 25px;
+        }
+
+            footer * {
+                color: #fff;
+            }
+
+            footer li {
+                margin: 5px 0 5px 0;
+            }
+                footer a {
+                    color: #0093F7;
+                }
 }
 
 @media screen and (min-width : 360px) {
-    header{
-        background-image: url('../img/showcase_bg.png');
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    header figure a img{
+        position: relative;
+        top: 0;
+        transition: top ease-out 0.3s;
     }
-        header figure{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        header figure a img:hover{
+            top: -5px;
+        }
+        
+        .navbar-static-top {
+            border-width: 0 0 0;
         }
 
-            header figure a img{
-                width: 200px;
-                position: relative;
-                top: 0;
-                transition: top ease-out 0.3s;
-            }
-                header figure a img:hover{
-                    top: -5px;
-                }
+        .navbar {
+            min-height: auto;
+            margin-bottom: 0px;
+            border: 0px !important;
+        }
 
         header nav {
             background-image: url('../img/tile_bg.jpg');
             background-size: contain;
             background-attachment: fixed;
             width: 50%;
-            border-radius: 10px 10px 0px 0px;
+            border-radius: 10px 10px 0px 0px !important;
         }
 
-            header nav ul{
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                padding: 0;
-                margin: 0;
+            .container {
+                padding-right: 0px;
+                padding-left: 0px;
+                margin-right: 0px;
+                margin-left: 0px;
+                width: auto;
             }
 
-            header nav ul li{
-                text-align: center;
-                width: 100%;
-            }
+                .navbar-header {
+                    float:initial;
+                }
+                    .navbar-nav {
+                        float: initial;
+                    }
+                    header nav ul{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-around;
+                        padding: 0;
+                        margin: 0;
+                    }
 
-            header nav ul li a{
-                display: inline-block;
-                color: #141414;
-                transition: all ease-out 0.3s;
-                text-transform: uppercase;
-                font-size: 2em;
-                width: 100%;
-                background: transparent;
-                padding: 5px 0px 5px 0px;
-            }
+                    .navbar-nav>li {
+                        float: initial;
+                    }
+                    header nav ul li{
+                        text-align: center;
+                        width: 100%;
+                    }
 
-            header nav ul li a:hover{
-                color: #0093F7;
-                background: rgba(014,014,014,0.05);
-            }
+                    header nav ul li a{
+                        display: inline-block !important;
+                        color: #141414 !important;
+                        transition: all ease-out 0.3s;
+                        text-transform: uppercase;
+                        font-size: 2em;
+                        width: 100%;
+                        background: transparent;
+                        padding: 10px 0px 10px 0px !important;
+                        line-height: initial !important;
+                    }
+
+                    header nav ul li a:hover{
+                        color: #0093F7 !important;
+                        background: rgba(014,014,014,0.05) !important;
+                    }
 
 
         #main{
@@ -304,10 +392,6 @@ footer{
             background-size: 100% 100%;
             background-repeat: no-repeat;
         }
-
-            #main section {
-
-            }
 
             #main section article{
                 padding: 25px 50px 50px 25px;
