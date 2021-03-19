@@ -102,7 +102,7 @@ footer{
                     color: #fff;
                 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~ RESPONSIVE HEADER FOOTER MAIN CONTAINER TEL ~~~~~~~~~~~~~~~~~~~~~~~~*/
-@media screen and (max-width : 360px) {
+@media screen and (max-width : 400px) {
     
 /*HEADER CSS INDENTED AS HTML*/
 
@@ -248,7 +248,7 @@ footer{
                 }
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~ RESPONSIVE HEADER FOOTER MAIN CONTAINER AU DESSUS TEL ~~~~~~~~~~~~~~~~~~~~~~~~*/
-@media screen and (min-width : 360px) {
+@media screen and (min-width : 400px) {
 /*HEADER CSS INDENTED AS HTML*/
     /*LOGO CSS*/
     header figure a img{
@@ -358,7 +358,7 @@ footer{
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~ INDEX CSS INDENTED AS HTML ~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-@media screen and (max-width : 360px) {
+@media screen and (max-width : 400px) {
 
     #main section article.imgTxtButton div.blockImgTxtButton {
         display: flex;
@@ -442,7 +442,7 @@ footer{
                     }
 }
 
-@media screen and (min-width : 360px) {
+@media screen and (min-width : 400px) {
 
     #main section article.imgTxtButton div.blockImgTxtButton {
         display: flex;
@@ -530,7 +530,7 @@ footer{
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~ ABOUT PAGE CSS INDENTED AS HTML ~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-@media screen and (max-width : 360px) {
+@media screen and (max-width : 400px) {
     article.aboutImgTxt .aboutImg{
         height: 250px;
         background-image: url(../img/terreDeGeek-shop.jpg);
@@ -552,7 +552,7 @@ footer{
         }
 }
 
-@media screen and (min-width : 360px) {
+@media screen and (min-width : 400px) {
     article.aboutImgTxt .aboutImg{
         height: 500px;
         background-image: url('../img/terreDeGeek-shop.jpg');
@@ -576,7 +576,7 @@ footer{
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~ PRODUCTS PAGE CSS INDENTED AS HTML ~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-@media screen and (max-width : 360px) {
+@media screen and (max-width : 400px) {
     section#productPage {
         padding: 50px 0px;
     }
@@ -649,7 +649,7 @@ footer{
         }
 }
 
-@media screen and (min-width : 360px) {
+@media screen and (min-width : 400px) {
     section#productPage {
         padding: 50px 25px;
     }
@@ -725,7 +725,7 @@ footer{
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~ SINGLE PRODUCT PAGE CSS INDENTED AS HTML ~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-@media screen and (max-width : 360px) {
+@media screen and (max-width : 400px) {
     article.productAlone{
         display: flex;
         flex-direction: column;
@@ -797,7 +797,7 @@ footer{
                     }
 }
 
-@media screen and (min-width : 360px) {
+@media screen and (min-width : 400px) {
     article.productAlone{
         display: flex;
         flex-direction: column;
