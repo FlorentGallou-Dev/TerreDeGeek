@@ -23,6 +23,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
   <!--SHEETS AND SCRIPTS FOR NAV HAMBURGER MENU-->
 
+  <!--SHEETS AND SCRIPTS FOR NAV HAMBURGER MENU-->
+  <script src="https://kit.fontawesome.com/1219d1b540.js" crossorigin="anonymous"></script>
+
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/style.css">
@@ -43,11 +46,8 @@
       <div class="container">
         <div class="navbar-header"><!--hamburder menu-->
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
+            <i class="fas fa-bars"></i>
+          </button>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"><!--classic menu-->
           <ul class="nav navbar-nav">
@@ -60,7 +60,7 @@
     </nav>
   </header>
   
-  <div id="main">
+  <main>
     <section>
       <article class="imgTxtButton"><!--block intro to guide to about page-->
         <h2>Le magasin Terre de Geek</h2>
@@ -75,37 +75,40 @@
           </div>
         </div>
       </article>
-      <article class="topProduits"><!--quick list of the 3 last products-->
+      <div class="topProduits"><!--quick list of the 3 last products-->
         <h1>Top des produits Terre de Geek</h1>
-          <div class="articleList"><!--links are used to contian each article, better attitude for user to click-->
-            <a href="product-1.html" title="Figurine Yoda Kenner de 1978" class="productMini">
-              <div id="product-1"></div>
-              <div class="infoProd">
-                <h3>Figurine Yoda Kenner de 1978</h3>
-                <p>59€99</p>
-              </div>
-              <p class="descriProd">Lorem ipsum dolor sit amet, consectetur <strong>adipiscing</strong> elit. Ut vel egestas orci, vitae dapibus sapien. Nam imperdiet mauris eget mi posuere venenatis. Suspendisse euismod ligula in sem accumsan fringilla. Morbi eu pulvinar velit. Fusce ullamcorper efficitur nulla, non ullamcorper lorem tincidunt convallis. Curabitur quis vestibulum tortor, nec porta risus. Cras laoreet facilisis ex id tempus. Sed elementum pulvinar eleifend. Donec lacus enim, gravida sed dapibus quis, dapibus quis tellus. Pellentesque volutpat sit amet erat eu laoreet. Aenean dui leo, feugiat id enim non, facilisis auctor turpis. Etiam posuere, nisl id suscipit imperdiet, urna velit euismod felis, id gravida enim est in magna. Aenean libero velit, lacinia sit amet blandit vehicula, molestie eu sem.</p>
-            </a>
-            <a href="product-2.html" title="Carte Vidéo GeForce RTX 3080 Ti" class="productMini">
-              <div id="product-2"></div>
-              <div class="infoProd">
-                <h3>GeForce RTX 3080 Ti</h3>
-                <p>1280€14</p>
-              </div>
-              <p class="descriProd">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel egestas orci, vitae <strong>dapibus</strong> sapien. Nam imperdiet mauris eget mi posuere venenatis. Suspendisse euismod ligula in sem accumsan fringilla. Morbi eu pulvinar velit. Fusce ullamcorper efficitur nulla, non ullamcorper lorem tincidunt convallis. Curabitur quis vestibulum tortor, nec porta risus. Cras laoreet facilisis ex id tempus. Sed elementum pulvinar eleifend. Donec lacus enim, gravida sed dapibus quis, dapibus quis tellus. Pellentesque volutpat sit amet erat eu laoreet. Aenean dui leo, feugiat id enim non, facilisis auctor turpis. Etiam posuere, nisl id suscipit imperdiet, urna velit euismod felis, id gravida enim est in magna. Aenean libero velit, lacinia sit amet blandit vehicula, molestie eu sem.</p>
-            </a>
-            <a href="product-3.html" title="Le Guide du Voyageur Intergalactique" class="productMini">
-              <div id="product-3"></div>
-              <div class="infoProd">
-                <h3>Le Guide du Voyageur Intergalactique</h3>
-                <p>420€42</p>
-              </div>
-              <p class="descriProd">Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipiscing elit. Ut vel egestas orci, vitae dapibus sapien. Nam imperdiet mauris eget mi posuere venenatis. Suspendisse euismod ligula in sem accumsan fringilla. Morbi eu pulvinar velit. Fusce ullamcorper efficitur nulla, non ullamcorper lorem tincidunt convallis. Curabitur quis vestibulum tortor, nec porta risus. Cras laoreet facilisis ex id tempus. Sed elementum pulvinar eleifend. Donec lacus enim, gravida sed dapibus quis, dapibus quis tellus. Pellentesque volutpat sit amet erat eu laoreet. Aenean dui leo, feugiat id enim non, facilisis auctor turpis. Etiam posuere, nisl id suscipit imperdiet, urna velit euismod felis, id gravida enim est in magna. Aenean libero velit, lacinia sit amet blandit vehicula, molestie eu sem.</p>
-            </a>
-          </div>
-      </article>
+        <div class="articleList">
+          <article class="productArticle"><!-- each article is a product -->
+            <img src="img/yoda-kenner-1978-mini.jpg" alt="Photo de la figurine de Yoda Kenner de 1978"><!-- preview -->
+            <div class="infoProd">
+              <h3>Figurine Yoda Kenner de 1978</h3><!-- name -->
+              <p>59€99</p><!-- price -->
+            </div>
+            <p class="descriProd">Lorem ipsum dolor sit amet, consectetur <strong>adipiscing</strong> elit. Ut vel egestas orci, vitae dapibus sapien. Nam imperdiet mauris eget mi posuere venenatis. Suspendisse euismod ligula in sem accumsan fringilla. Morbi eu pulvinar velit. Fusce ullamcorper efficitur nulla, non ullamcorper lorem tincidunt convallis. Curabitur quis vestibulum tortor, nec porta risus. Cras laoreet facilisis ex id tempus. Sed elementum pulvinar eleifend. Donec lacus enim, gravida sed dapibus quis, dapibus quis tellus. Pellentesque volutpat sit amet erat eu laoreet. Aenean dui leo, feugiat id enim non, facilisis auctor turpis. Etiam posuere, nisl id suscipit imperdiet, urna velit euismod felis, id gravida enim est in magna. Aenean libero velit, lacinia sit amet blandit vehicula, molestie eu sem.</p>
+            <a href="product-1.html" title="Figurine Yoda Kenner de 1978">Voir l'article</a>
+          </article>
+          <article class="productArticle">
+            <img src="img/GeForce-RTX-3080Ti-mini.jpg" alt="Photo de la GeForce RTX 3080Ti">
+            <div class="infoProd">
+              <h3>GeForce RTX 3080 Ti</h3>
+              <p>1280€14</p>
+            </div>
+            <p class="descriProd">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel egestas orci, vitae <strong>dapibus</strong> sapien. Nam imperdiet mauris eget mi posuere venenatis. Suspendisse euismod ligula in sem accumsan fringilla. Morbi eu pulvinar velit. Fusce ullamcorper efficitur nulla, non ullamcorper lorem tincidunt convallis. Curabitur quis vestibulum tortor, nec porta risus. Cras laoreet facilisis ex id tempus. Sed elementum pulvinar eleifend. Donec lacus enim, gravida sed dapibus quis, dapibus quis tellus. Pellentesque volutpat sit amet erat eu laoreet. Aenean dui leo, feugiat id enim non, facilisis auctor turpis. Etiam posuere, nisl id suscipit imperdiet, urna velit euismod felis, id gravida enim est in magna. Aenean libero velit, lacinia sit amet blandit vehicula, molestie eu sem.</p>
+            <a href="product-2.html" title="Carte Vidéo GeForce RTX 3080 Ti">Voir l'article</a>
+          </article>
+          <article class="productArticle">
+            <img src="img/hitchhiker_s_guide_to_the_galaxy-replica-mini.jpg" alt="Photo du Guide du Voyageur Intergalactique">
+            <div class="infoProd">
+              <h3>Le Guide du Voyageur Intergalactique</h3>
+              <p>420€42</p>
+            </div>
+            <p class="descriProd">Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipiscing elit. Ut vel egestas orci, vitae dapibus sapien. Nam imperdiet mauris eget mi posuere venenatis. Suspendisse euismod ligula in sem accumsan fringilla. Morbi eu pulvinar velit. Fusce ullamcorper efficitur nulla, non ullamcorper lorem tincidunt convallis. Curabitur quis vestibulum tortor, nec porta risus. Cras laoreet facilisis ex id tempus. Sed elementum pulvinar eleifend. Donec lacus enim, gravida sed dapibus quis, dapibus quis tellus. Pellentesque volutpat sit amet erat eu laoreet. Aenean dui leo, feugiat id enim non, facilisis auctor turpis. Etiam posuere, nisl id suscipit imperdiet, urna velit euismod felis, id gravida enim est in magna. Aenean libero velit, lacinia sit amet blandit vehicula, molestie eu sem.</p>
+            <a href="product-3.html" title="Le Guide du Voyageur Intergalactique">Voir l'article</a>
+          </article>
+        </div>
+      </div>
     </section>
-  </div>
+  </main>
 
   <footer>
     <div id="infosFT"><!--Site legal name and year footer-->
@@ -126,6 +129,7 @@
       <p>08 14 12 42 69</p>
       <p>quicestquonappelle@terredegeek.fr</p>
     </div>
+    <img id="edBoon" src="img/edboon.png" alt="Toasty">
   </footer>
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>

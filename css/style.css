@@ -1,858 +1,116 @@
-/*~~~~~~~~~~~~~~~~~~~~~~~~ FONTS ~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~ FONTS ~~~~~~~~~~~~~~*/
 
-
-
-/*~~~~~~~~~~~~~~~~~~~~~~~~ TEXTS ~~~~~~~~~~~~~~~~~~~~~~~~*/
-
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p, a, span, li{
     font-family: Arial, sans-serif;
-    color: #fff;
-    text-transform: uppercase;
-    text-shadow: 1px 0px 5px #0093f7, 1px 1px 5px #0093f7, 0px 1px 5px #0093f7, -1px 0px 5px #0093f7, -1px -1px 5px #0093f7, 0px -1px 5px #0093f7;
 }
 
-h1{font-size: 2em; font-weight: 800;}
-h2{font-size: 1.8em;font-weight: 700;}
-h3{font-size: 1.6em;font-weight: 600;}
-h4{font-size: 1.4em;font-weight: 500;}
-
-p, span, figcaption, button {
-    font-family: Arial, sans-serif;
-    color: #fff;
+h1{
+    font-size: 2.5rem;
 }
 
-ul {
-    list-style: none;
+h2{
+    font-size: 2rem;
 }
 
-a{
-    text-decoration: none;
-    color: #0093F7;
-}
-    a:hover{
-        text-decoration: none;
-    }
-
-strong {
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #0093f7;
+h3{
+    font-size: 1.75rem;
 }
 
-/*~~~~~~~~~~~~~~~~~~~~~~~~ GENERAL STYLE RESPONSIVE OR NOT ~~~~~~~~~~~~~~~~~~~~~~~~*/
+h4{
+    font-size: 1.5rem;
+}
 
+h5{
+    font-size: 1.25rem;
+}
+
+h6{
+    font-size: 1rem;
+}
+
+p, a, span, li{
+    font-size: 1rem;
+}
+
+/*~~~~~~~~~~~~~~ SMARTPHONES CSS ~~~~~~~~~~~~~~*/
 body{
-    background-image: url('../img/tile_bg.jpg');
-    background-size: contain;
-    background-attachment: fixed;
+    background-color: #fff;
 }
 
-    header{
-        background-image: url('../img/showcase_bg.png');
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-        header figure{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-            header figure a img{
-                width: 200px;
-            }
-
-            header figure figcaption{
-                text-transform: uppercase;
-                margin-bottom: 15px;
-            }
-
-    div #main{
-        margin-top: 100px;
-    }
-
-footer{
-    background: #030303;
+header{
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #14141488;
 }
 
-    footer div#sitemapFT {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
+#logo figure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header figure img{
+    width: 150px;
+}
+
+.navbar-inverse {
+    background-color: transparent;
+    border-color: transparent;
+    margin: 0;
+}
+.container, .container>.navbar-header {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+.navbar-toggle {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    padding: 20px 20px;
+    border-color: #141414;
+}
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+    background-color: #141414;
+}
+nav .fa-bars {
+    color: #141414;
+    font-size: 2em;
+}
+.navbar-inverse .navbar-toggle:focus .fa-bars, .navbar-inverse .navbar-toggle:hover .fa-bars {
+    color: #fff;
+}
+
+footer{position: relative;}
+#edBoon{display: none;}
+
+/*~~~~~~~~~~~~~~ TOUCHPADS CSS ~~~~~~~~~~~~~~*/
+
+@media screen and (min-width: 769px) {
+    body{
+        background-image: url("../img/tile_bg.jpg");
+        background-size: contain;
     }
+ 
+}
 
-        footer div#sitemapFT ul {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-            padding: 0;
-        }
 
-            footer div#sitemapFT ul li a{
-                text-transform: uppercase;
-                transition: all ease-out 0.3s;
-            }
-                footer div#sitemapFT ul li a:hover{
-                    color: #fff;
-                }
-/*~~~~~~~~~~~~~~~~~~~~~~~~ RESPONSIVE HEADER FOOTER MAIN CONTAINER TEL ~~~~~~~~~~~~~~~~~~~~~~~~*/
-@media screen and (max-width : 400px) {
+/*~~~~~~~~~~~~~~ DESKTOPS CSS ~~~~~~~~~~~~~~*/
+@media screen and (min-width: 1280px) {
+     
+    footer:hover #edBoon {
+        bottom: 0px;
+        right: 0px;
+    }
     
-/*HEADER CSS INDENTED AS HTML*/
-
-    /*LOGO CSS*/
-    header figure figcaption{
-        font-size: 1.1em;
-        text-align: center;
-        color: #fff;
+    #edBoon{
+        display: initial;
+        position: absolute;
+        width: 150px;
+        bottom: -154px;
+        right: -150px;
+        transition: all 0.3s ease-out;
     }
-
-    /*NAV CSS INDENTED AS HTML*/
-    .navbar-inverse {
-        background: transparent !important;
-        border-color: #080808;
-    }
-    .navbar-static-top {
-        border-width: 0 0 0;
-    }
-
-    .navbar {
-        min-height: auto;
-        margin: 10px 0 0 0;
-        border: 0px !important;
-    }
-
-    header nav {
-        background-image: url('../img/tile_bg.jpg');
-        background-size: contain;
-        background-attachment: fixed;
-        width: 50%;
-        border-radius: 10px 10px 0px 0px !important;
-    }
-
-        .container {
-            padding-right: 0px;
-            padding-left: 0px;
-            margin-right: 0px;
-            margin-left: 0px;
-            width: auto;
-        }
-
-            .navbar-header {
-                float:initial;
-                margin: 0 0 10px 0 !important;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: center;
-            }
-                .navbar-inverse .navbar-toggle {
-                    border:0 !important;
-                    background: #ffffff88 !important;
-                    float: initial;
-                    padding: 9px 10px;
-                    margin-top: 0;
-                    margin-right: 0;
-                    margin-bottom: 10px;
-                    border-radius: 0;
-                }
-                .navbar-inverse .navbar-collapse {
-                    border-color: transparent;
-                    background-image: url('../img/tile_bg.jpg');
-                    background-size: contain;
-                    background-attachment: fixed;
-                    border-radius: 5px 5px 0 0;
-                }
-                    .navbar-inverse .navbar-toggle:hover {
-                        background-color: #0093F7 !important;
-                    }
-
-                .navbar-nav {
-                    float: initial;
-                }
-                header nav ul{
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    padding: 0;
-                    margin: 0;
-                }
-
-                .navbar-nav>li {
-                    float: initial;
-                }
-                header nav ul li{
-                    text-align: center;
-                    width: 100%;
-                }
-
-                header nav ul li a{
-                    display: inline-block !important;
-                    color: #141414 !important;
-                    transition: all ease-out 0.3s;
-                    text-transform: uppercase;
-                    font-size: 2em;
-                    width: 100%;
-                    background: transparent;
-                    padding: 10px 0px 10px 0px !important;
-                    line-height: initial !important;
-                }
-
-                header nav ul li a:hover{
-                    color: #0093F7 !important;
-                    background: rgba(014,014,014,0.05) !important;
-                }
-
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~ FIN HEADER ~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
-    #main section article{
-        padding: 25px 5px 50px 5px;
-    }
-
-    h1, h2, h3, h4, h5, h6, p, p, span, figcaption, button {color: #141414;}
-
-        #main section article h2, #main section article h1{
-            text-align: center;
-            margin-bottom: 50px;
-            color: #fff;
-        }
-
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~ DEBUT FOOTER ~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
-    footer{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 25px;
-    }
-
-        footer div {
-            margin-bottom: 25px;
-        }
-
-            footer * {
-                color: #fff;
-            }
-
-            footer li {
-                margin: 5px 0 5px 0;
-            }
-                footer a {
-                    color: #0093F7;
-                }
-}
-/*~~~~~~~~~~~~~~~~~~~~~~~~ RESPONSIVE HEADER FOOTER MAIN CONTAINER AU DESSUS TEL ~~~~~~~~~~~~~~~~~~~~~~~~*/
-@media screen and (min-width : 400px) {
-/*HEADER CSS INDENTED AS HTML*/
-    /*LOGO CSS*/
-    header figure a img{
-        position: relative;
-        top: 0;
-        transition: top ease-out 0.3s;
-    }
-        header figure a img:hover{
-            top: -5px;
-        }
-        
-        /*NAV CSS INDENTED AS HTML*/
-        .navbar-static-top {
-            border-width: 0 0 0;
-        }
-
-        .navbar {
-            min-height: auto;
-            margin-bottom: 0px;
-            border: 0px !important;
-        }
-
-        header nav {
-            background-image: url('../img/tile_bg.jpg');
-            background-size: contain;
-            background-attachment: fixed;
-            width: 50%;
-            border-radius: 10px 10px 0px 0px !important;
-        }
-
-            .container {
-                padding-right: 0px;
-                padding-left: 0px;
-                margin-right: 0px;
-                margin-left: 0px;
-                width: auto;
-            }
-
-                .navbar-header {
-                    float:initial;
-                }
-                    .navbar-nav {
-                        float: initial;
-                    }
-                    header nav ul{
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: space-around;
-                        padding: 0;
-                        margin: 0;
-                    }
-
-                    .navbar-nav>li {
-                        float: initial;
-                    }
-                    header nav ul li{
-                        text-align: center;
-                        width: 100%;
-                    }
-
-                    header nav ul li a{
-                        display: inline-block !important;
-                        color: #141414 !important;
-                        transition: all ease-out 0.3s;
-                        text-transform: uppercase;
-                        font-size: 2em;
-                        width: 100%;
-                        background: transparent;
-                        padding: 10px 0px 10px 0px !important;
-                        line-height: initial !important;
-                    }
-
-                    header nav ul li a:hover{
-                        color: #0093F7 !important;
-                        background: rgba(014,014,014,0.05) !important;
-                    }
-/*~~~~~~~~~~~~ FIN HEADER ~~~~~~~~~~~~*/
-
-        #main{
-            width: 80%;
-            margin-top: 100px;
-            margin-left: auto;
-            margin-right: auto;
-            background-image: url('../img/showcase_bg.png');
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-        }
-
-            #main section article{
-                padding: 25px 50px 50px 25px;
-            }
-
-            #main section article h2, #main section article h1{
-                text-align: center;
-                margin-bottom: 50px;
-            }
-
-/*~~~~~~~~~~~~ DEBUT FOOTER ~~~~~~~~~~~~*/
-
-    footer{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-    }
-}
-
-/*~~~~~~~~~~~~~~~~~~~~~~~~ INDEX CSS INDENTED AS HTML ~~~~~~~~~~~~~~~~~~~~~~~~*/
-
-@media screen and (max-width : 400px) {
-
-    #main section article.imgTxtButton div.blockImgTxtButton {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-        #main section article.imgTxtButton div.blockImgTxtButton .img a img{
-            width: 300px;
-        }
-
-        #main section article.imgTxtButton div.blockImgTxtButton .txtButton{
-            padding: 25px;
-            font-size: 1.2em;
-            width: auto;
-            color: #000;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-            #main section article.imgTxtButton div.blockImgTxtButton .txtButton a{
-                font-size: 1.2em;
-                background-color: #0093F7;
-                padding: 10px 20px;
-                color: #fff;
-                display: inline-block;
-                margin-top: 15px;
-            }
-
-        #main section article.topProduits div {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-            #main section article.topProduits div a{
-                width: 350px;
-                border: 5px #0093F7 solid;
-                margin: 15px 0 15px 0;
-            }
-
-                 #main section article.topProduits div a div#product-1, #main section article.topProduits div a div#product-2, #main section article.topProduits div a div#product-3{
-                    height: 300px;
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    background-position: top;
-                    padding: 0px;
-                }
-
-                    #main section article.topProduits div a div#product-1{
-                        background-image: url(../img/yoda-kenner-1978.jpg);
-                    }
-                    #main section article.topProduits div a div#product-2{
-                        background-image: url(../img/GeForce-RTX-3080Ti.jpg);
-                    }
-                    #main section article.topProduits div a div#product-3{
-                        background-image: url(../img/hitchhiker_s_guide_to_the_galaxy-replica.jpg);
-                    }
-
-                    #main section article.topProduits div a div.infoProd{
-                        padding: 5px 10px 5px 10px;
-                        font-size: 1.2em;
-                        background-color: #141414;
-                        text-align: center;
-                    }
-
-                    #main section article.topProduits div a div.infoProd p, #main section article.topProduits div a div.infoProd h3{
-                        color: #fff;
-                    }
-
-                    #main section article.topProduits div a div.infoProd h3{
-                        font-size: 1.4em;
-                    }
-
-                    #main section article.topProduits div a p.descriProd{
-                        padding: 10px 20px 10px 20px;
-                        font-size: 1.2em;
-                        text-align: justify;
-                        background: #ffffffaa;
-                        margin: 0;
-                    }
-}
-
-@media screen and (min-width : 400px) {
-
-    #main section article.imgTxtButton div.blockImgTxtButton {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-    }
-
-         #main section article.imgTxtButton div.blockImgTxtButton .txtButton{
-            padding: 25px;
-            width: 50%;
-        }
-
-            #main section article.imgTxtButton div.blockImgTxtButton .txtButton a{
-                font-size: 1.2em;
-                border: 1px solid #fff;
-                padding: 10px 20px;
-                color: #fff;
-                transition: all ease-out 0.3s;
-                display: inline-block;
-                margin-top: 15px;
-            }
-
-                #main section article.imgTxtButton div.blockImgTxtButton .txtButton a:hover{
-                    background: #0093F7;
-                    color: #fff;
-                    border: 1px solid #0093F7;
-                }
-
-            #main section article.topProduits div {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content:space-around;
-                padding: 0px 50px 0px 50px;
-            }
-
-                #main section article.topProduits div a{
-                    width: 350px;
-                    border: 2px #fff solid;
-                    box-shadow: 0px 0px 0px 0px transparent;
-                    position: relative;
-                    top: 0;
-                    transition: all ease-out 0.3s;
-                }
-
-                    #main section article.topProduits div a:hover{
-                        box-shadow: 0px 5px 10px 2px #0093f788;
-                        top: -5px;
-                    }
-
-                    #main section article.topProduits div a div#product-1, #main section article.topProduits div a div#product-2, #main section article.topProduits div a div#product-3{
-                        height: 300px;
-                        background-repeat: no-repeat;
-                        background-size: cover;
-                        background-position: top;
-                        padding: 0px;
-                    }
-
-                        #main section article.topProduits div a div#product-1{
-                            background-image: url(../img/yoda-kenner-1978.jpg);
-                        }
-                        #main section article.topProduits div a div#product-2{
-                            background-image: url(../img/GeForce-RTX-3080Ti.jpg);
-                        }
-                        #main section article.topProduits div a div#product-3{
-                            background-image: url(../img/hitchhiker_s_guide_to_the_galaxy-replica.jpg);
-                        }
-
-                    #main section article.topProduits div a div.infoProd{
-                        padding: 5px 10px 5px 10px;
-                        background-color: #141414;
-                    }
-
-                        #main section article.topProduits div a div.infoProd h3{
-                            font-size: 1.4em;
-                        }
-
-                    #main section article.topProduits div a p.descriProd{
-                        padding: 5px 15px 5px 15px;
-                        text-align: justify;
-                    }
-
-}
-
-/*~~~~~~~~~~~~~~~~~~~~~~~~ ABOUT PAGE CSS INDENTED AS HTML ~~~~~~~~~~~~~~~~~~~~~~~~*/
-
-@media screen and (max-width : 400px) {
-    article.aboutImgTxt .aboutImg{
-        height: 250px;
-        background-image: url(../img/terreDeGeek-shop.jpg);
-        background-repeat: no-repeat;
-        background-size: contain;
-    }
-
-    article.aboutImgTxt .aboutTxt{
-        width: 80%;
-        margin: 50px auto;
-    }
-        article.aboutImgTxt .aboutTxt p {
-            text-align: justify;
-        }
-        article.aboutImgTxt .aboutTxt h3 {
-            text-align: center;
-            margin: 25px 0 25px 0;
-            color: #fff;
-        }
-}
-
-@media screen and (min-width : 400px) {
-    article.aboutImgTxt .aboutImg{
-        height: 500px;
-        background-image: url('../img/terreDeGeek-shop.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-    }
-
-    article.aboutImgTxt .aboutTxt{
-        width: 80%;
-        margin: 50px auto;
-    }
-        article.aboutImgTxt .aboutTxt p {
-            text-align: justify;
-        }
-        article.aboutImgTxt .aboutTxt h3 {
-            text-align: center;
-            margin: 25px 0 25px 0;
-        }
-}
-
-/*~~~~~~~~~~~~~~~~~~~~~~~~ PRODUCTS PAGE CSS INDENTED AS HTML ~~~~~~~~~~~~~~~~~~~~~~~~*/
-
-@media screen and (max-width : 400px) {
-    section#productPage {
-        padding: 50px 0px;
-    }
-
-        section#productPage h1{
-            text-align: center;
-            color: #fff;
-        }
-
-        section#productPage #listProduct{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        section#productPage #listProduct article.productUnit a.productMini{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background: #141414;
-            border: 2px #fff solid;
-        }
-
-        /*Chaque article*/
-        section#productPage #listProduct article.productUnit a.productMini div#product-1, section#productPage #listProduct article.productUnit a.productMini div#product-2, section#productPage #listProduct article.productUnit a.productMini div#product-3{
-            height: 30em;
-            width: 100%;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: top;
-            padding: 0px;
-        }
-
-            section#productPage #listProduct article.productUnit a.productMini div#product-1{
-                background-image: url(../img/yoda-kenner-1978.jpg);
-            }
-            section#productPage #listProduct article.productUnit a.productMini div#product-2{
-                background-image: url(../img/GeForce-RTX-3080Ti.jpg);
-            }
-            section#productPage #listProduct article.productUnit a.productMini div#product-3{
-                background-image: url(../img/hitchhiker_s_guide_to_the_galaxy-replica.jpg);
-            }
-
-        section#productPage #listProduct article.productUnit a.productMini .contInfos{
-            flex: 1;
-            padding: 0 25px 25px 25px;
-        }
-
-            section#productPage #listProduct article.productUnit a.productMini .contInfos .infoProd{
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-                margin-bottom: 50px;
-            }
-
-                section#productPage #listProduct article.productUnit a.productMini .contInfos .infoProd h3{
-                    color: #fff;
-                }
-
-                section#productPage #listProduct article.productUnit a.productMini .contInfos .infoProd p{
-                    color: #fff;
-                    font-size: 1.5em;
-                    text-shadow: 1px 0px 5px #0093f7, 1px 1px 5px #0093f7, 0px 1px 5px #0093f7, -1px 0px 5px #0093f7, -1px -1px 5px #0093f7, 0px -1px 5px #0093f7;
-                }
-
-        section#productPage #listProduct article.productUnit a.productMini .contInfos p{
-            color: #fff;
-        }
-}
-
-@media screen and (min-width : 400px) {
-    section#productPage {
-        padding: 50px 25px;
-    }
-
-        section#productPage h1{
-            text-align: center;
-        }
-
-        section#productPage #listProduct{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        section#productPage #listProduct article.productUnit a.productMini{
-            display: flex;
-            flex-direction: row;
-            justify-content:space-between;
-            align-items: center;
-            background: #141414;
-            border: 2px #fff solid;
-            box-shadow: 0px 0px 0px 0px transparent;
-            position: relative;
-            left: 0;
-            transition: all ease-out 0.3s;
-        }
-
-        section#productPage #listProduct article.productUnit a:hover{
-                box-shadow: 5px 0px 10px 2px #0093f788;
-                left: 5px;
-            }
-
-
-        /*Chaque article*/
-        section#productPage #listProduct article.productUnit a.productMini div#product-1, section#productPage #listProduct article.productUnit a.productMini div#product-2, section#productPage #listProduct article.productUnit a.productMini div#product-3{
-            height: 30em;
-            flex: 1;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: top;
-            padding: 0px;
-        }
-
-            section#productPage #listProduct article.productUnit a.productMini div#product-1{
-                background-image: url(../img/yoda-kenner-1978.jpg);
-            }
-            section#productPage #listProduct article.productUnit a.productMini div#product-2{
-                background-image: url(../img/GeForce-RTX-3080Ti.jpg);
-            }
-            section#productPage #listProduct article.productUnit a.productMini div#product-3{
-                background-image: url(../img/hitchhiker_s_guide_to_the_galaxy-replica.jpg);
-            }
-
-        section#productPage #listProduct article.productUnit a.productMini .contInfos{
-            flex: 1;
-            padding: 0 25px;
-        }
-
-            section#productPage #listProduct article.productUnit a.productMini .contInfos .infoProd{
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-                margin-bottom: 50px;
-            }
-
-                section#productPage #listProduct article.productUnit a.productMini .contInfos .infoProd p{
-                    font-size: 1.5em;
-                    text-shadow: 1px 0px 5px #0093f7, 1px 1px 5px #0093f7, 0px 1px 5px #0093f7, -1px 0px 5px #0093f7, -1px -1px 5px #0093f7, 0px -1px 5px #0093f7;
-                }
-}
-
-/*~~~~~~~~~~~~~~~~~~~~~~~~ SINGLE PRODUCT PAGE CSS INDENTED AS HTML ~~~~~~~~~~~~~~~~~~~~~~~~*/
-
-@media screen and (max-width : 400px) {
-    article.productAlone{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-        article.productAlone div.articleList{
-            display: flex;
-            flex-direction: column-reverse;
-            justify-content: center;
-            width: 100%;
-        }
-
-            article.productAlone div.articleList #galerie{
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                flex-wrap: wrap;
-                width: 100%;
-            }
-
-                article.productAlone div.articleList #galerie figure.productPic{
-                    width: 100%;
-                }
-
-                    article.productAlone div.articleList #galerie figure.productPic img{
-                        width: 100%;
-                    }
-
-            article.productAlone div.articleList #detailsProduit{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
-                article.productAlone div.articleList #detailsProduit h2{
-                    text-align: center;
-                }
-
-                article.productAlone div.articleList #detailsProduit .infoPrix{
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    margin-bottom: 50px;
-                }
-
-                article.productAlone div.articleList #detailsProduit .infoPrix .detailsProd{
-                    flex: 2;
-                    padding: 0 25px;
-                }
-
-                    article.productAlone div.articleList #detailsProduit .infoPrix .detailsProd h4, article.productAlone div.articleList #detailsProduit .infoPrix .detailsProd p{
-                        margin-bottom: 25px;
-                    }
-
-                    article.productAlone div.articleList #detailsProduit .infoPrix .detailsProd ul{
-                        list-style: inside;
-                        color: #141414;
-                        font-size: 1.3em;
-                    }
-
-                article.productAlone div.articleList #detailsProduit .infoPrix .prixProd{
-                    flex: 1;
-                    padding: 0 25px;
-                }
-
-                    article.productAlone div.articleList #detailsProduit .infoPrix .prixProd p{
-                        font-size: 3.5em;
-                    }
-}
-
-@media screen and (min-width : 400px) {
-    article.productAlone{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-        article.productAlone div.articleList{
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-        }
-
-            article.productAlone div.articleList #galerie{
-                flex: 1;
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                flex-wrap: wrap;
-            }
-
-            article.productAlone div.articleList #detailsProduit{
-                flex: 1;
-            }
-
-                article.productAlone div.articleList #detailsProduit h2{
-                    text-align: left;
-                }
-
-                article.productAlone div.articleList #detailsProduit .infoPrix{
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                }
-
-                article.productAlone div.articleList #detailsProduit .infoPrix .detailsProd{
-                    flex: 2;
-                    padding: 0 25px;
-                }
-
-                    article.productAlone div.articleList #detailsProduit .infoPrix .detailsProd h4, article.productAlone div.articleList #detailsProduit .infoPrix .detailsProd p{
-                        margin-bottom: 25px;
-                    }
-
-                    article.productAlone div.articleList #detailsProduit .infoPrix .detailsProd ul{
-                        list-style: inside;
-                        color: white;
-                        font-size: 1.3em;
-                    }
-
-                article.productAlone div.articleList #detailsProduit .infoPrix .prixProd{
-                    flex: 1;
-                    padding: 0 25px;
-                }
-
-                    article.productAlone div.articleList #detailsProduit .infoPrix .prixProd p{
-                        font-size: 3.5em;
-                    }
 }
