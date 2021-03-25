@@ -1,7 +1,19 @@
+/* \/  \/ */
+/* /\  /\ */
+/*~~~~~~~~~~~~~~ CSS VARS ~~~~~~~~~~~~~~*/
+:root {
+    --blue: #0093F7;
+    --grey: #141414;
+    --greyBackground: #14141488;
+    --white: #fff;
+    --textShadow: 0px 1px 2px var(--blue), 1px 1px 2px var(--blue), 1px 0px 2px var(--blue), 0px -1px 2px var(--blue), -1px -1px 2px var(--blue), -1px 0px 2px var(--blue);
+  }
+
 /*~~~~~~~~~~~~~~ FONTS ~~~~~~~~~~~~~~*/
 
 h1, h2, h3, h4, h5, h6, p, a, span, li{
     font-family: Arial, sans-serif;
+    word-break: break-word;
 }
 
 h1{
@@ -32,18 +44,34 @@ p, a, span, li{
     font-size: 1rem;
 }
 
-/*~~~~~~~~~~~~~~ SMARTPHONES CSS ~~~~~~~~~~~~~~*/
-body{
-    background-color: #fff;
+li{
+    list-style: none;
 }
 
+strong {
+    color: var(--blue);
+    font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6{
+    text-align: center;
+    color: var(--white);
+    text-shadow: var(--textShadow);
+    text-transform: uppercase;
+}
+
+/*~~~~~~~~~~~~~~ SMARTPHONES CSS ~~~~~~~~~~~~~~*/
+body{
+    background-color: var(--white);
+}
+/*~~~ \/ HEADER \/ ~~~*/
 header{
     height: 20vh;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    background-color: #14141488;
+    background-color: var(--greyBackground);
 }
 
 #logo figure{
@@ -55,36 +83,183 @@ header figure img{
     width: 150px;
 }
 
-.navbar-inverse {
+header figcaption{
+    text-align: center;
+    color: var(--white);
+}
+
+/* \/ NAV BAR \/ */
+.navbar-inverse, .navbar-inverse .navbar-collapse {
     background-color: transparent;
     border-color: transparent;
     margin: 0;
 }
-.container, .container>.navbar-header {
+.container>.navbar-collapse, .container, .container>.navbar-header {
     padding-right: 0px;
     padding-left: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 84px;
+}
+.navbar-collapse {
+    border-top: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 .navbar-toggle {
+    float: none;
+    display: block;
     margin-top: 0px;
-    margin-right: 0px;
+    margin-right: auto;
     margin-bottom: 0px;
-    margin-left: 0px;
-    padding: 20px 20px;
-    border-color: #141414;
+    margin-left: auto;
+    padding: 10px 15px;
+    border-color: var(--grey);
+    background-color: var(--white);
 }
 .navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
-    background-color: #141414;
+    background-color: var(--grey);
 }
 nav .fa-bars {
-    color: #141414;
+    color: var(--grey);
     font-size: 2em;
 }
 .navbar-inverse .navbar-toggle:focus .fa-bars, .navbar-inverse .navbar-toggle:hover .fa-bars {
-    color: #fff;
+    color: var(--white);
 }
 
-footer{position: relative;}
+.navbar-nav{
+    text-align: center;
+}
+
+.navbar-nav li{
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: var(--white);
+    text-shadow: var(--textShadow);
+}
+/* /\ NAV BAR /\ */
+/*~~~ /\ HEADER /\ ~~~*/
+
+/*~~~ \/ MAIN \/ ~~~*/
+main{
+    padding: 0 2vw;
+}
+main img{
+    max-width: 100%;
+    height: auto;
+}
+/* \/ BOUTONS \/ */
+a.boutonSimple {
+    color: var(--white);
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid var(--blue);
+    padding: 1vh;
+    background-color: var(--blue);
+}
+/* /\ BOUTONS /\ */
+/* \/ LIMIT TEXT LENGTH \/ */
+main p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+/* /\ LIMIT TEXT LENGTH /\ */
+
+/* \/ shop info article \/ */
+#imgTxtButton .blockImgTxtButton{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#imgTxtButton .txtButton{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1vh 0;
+}
+#imgTxtButton .txtButton p{
+    text-align: justify;
+}
+/* /\ shop info article /\ */
+
+/* \/ top product list \/ */
+#articleList{
+    padding: 0 2vh;
+}
+#articleList, #articleList .productArticle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1vh 0;
+}
+#articleList .productArticle{
+    border: 3px solid var(--blue);
+}
+#articleList .headProduct{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+#articleList .infoProd{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--greyBackground);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+#articleList .infoProd h3{
+    font-size: 1.3rem;
+}
+#articleList .infoProd p{
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--white);
+}
+#articleList .descriProd{
+    padding: 5px;
+    text-align: justify;
+}
+/* /\ top product list /\ */
+/*~~~ /\ MAIN /\ ~~~*/
+
+/*~~~ \/ FOOTER \/ ~~~*/
+footer{
+    padding: 2vh 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--grey);
+    text-align: center;
+    color: var(--white);
+}
+footer ul{
+    padding: 0;
+}
+
+footer a {
+    color: var(--blue);
+    text-transform: uppercase;
+}
+
 #edBoon{display: none;}
+/*~~~ /\ FOOTER /\ ~~~*/
 
 /*~~~~~~~~~~~~~~ TOUCHPADS CSS ~~~~~~~~~~~~~~*/
 
@@ -96,15 +271,26 @@ footer{position: relative;}
  
 }
 
-
 /*~~~~~~~~~~~~~~ DESKTOPS CSS ~~~~~~~~~~~~~~*/
 @media screen and (min-width: 1280px) {
      
+    /* \/ BOUTONS \/ */
+    a.boutonSimple {
+        color: var(--blue);
+        background-color: transparent;
+        transition: all 0.3s ease-out;
+    }
+    a.boutonSimple:hover {
+        color: var(--white);
+        background-color: var(--blue);
+    }
+    /* /\ BOUTONS /\ */
+
+    /* \/ FOOTER BONUS \/ */
     footer:hover #edBoon {
         bottom: 0px;
         right: 0px;
     }
-    
     #edBoon{
         display: initial;
         position: absolute;
@@ -113,4 +299,5 @@ footer{position: relative;}
         right: -150px;
         transition: all 0.3s ease-out;
     }
+    /* /\ FOOTER BONUS /\ */
 }

@@ -62,7 +62,7 @@
   
   <main>
     <section>
-      <article class="imgTxtButton"><!--block intro to guide to about page-->
+      <article id="imgTxtButton"><!--block intro to guide to about page-->
         <h2>Le magasin Terre de Geek</h2>
         <div class="blockImgTxtButton">
           <div class="img">
@@ -70,40 +70,47 @@
           </div>
           <div class="txtButton">
             <p>Né de l'idée originale du simple plaisir de se retrouver entre passionnés de <strong>multimédia</strong> et <strong>culture Geek</strong>, Terre de Geek est un condencé de plaisirs simples que sont bon goûts, fluidité et designs des années 80-90.</p>
-            <p>Le concepte vous plaît ? Suivez le guide \/</p>
+            <p>Le concepte vous plaît ?</p>
+            <p>\/ Suivez le guide \/</p>
             <a href="about.html" title="Plus d'informations sur les magasins Terre de Geek." class="boutonSimple" >La suite !</a>
           </div>
         </div>
       </article>
       <div class="topProduits"><!--quick list of the 3 last products-->
         <h1>Top des produits Terre de Geek</h1>
-        <div class="articleList">
+        <div id="articleList">
           <article class="productArticle"><!-- each article is a product -->
-            <img src="img/yoda-kenner-1978-mini.jpg" alt="Photo de la figurine de Yoda Kenner de 1978"><!-- preview -->
-            <div class="infoProd">
-              <h3>Figurine Yoda Kenner de 1978</h3><!-- name -->
-              <p>59€99</p><!-- price -->
+            <div class="headProduct">
+              <img src="img/yoda-kenner-1978-mini.jpg" alt="Photo de la figurine de Yoda Kenner de 1978"><!-- preview -->
+              <div class="infoProd">
+                <h3>Figurine Yoda Kenner de 1978</h3><!-- name -->
+                <p>59€99</p><!-- price -->
+              </div>
             </div>
             <p class="descriProd">Lorem ipsum dolor sit amet, consectetur <strong>adipiscing</strong> elit. Ut vel egestas orci, vitae dapibus sapien. Nam imperdiet mauris eget mi posuere venenatis. Suspendisse euismod ligula in sem accumsan fringilla. Morbi eu pulvinar velit. Fusce ullamcorper efficitur nulla, non ullamcorper lorem tincidunt convallis. Curabitur quis vestibulum tortor, nec porta risus. Cras laoreet facilisis ex id tempus. Sed elementum pulvinar eleifend. Donec lacus enim, gravida sed dapibus quis, dapibus quis tellus. Pellentesque volutpat sit amet erat eu laoreet. Aenean dui leo, feugiat id enim non, facilisis auctor turpis. Etiam posuere, nisl id suscipit imperdiet, urna velit euismod felis, id gravida enim est in magna. Aenean libero velit, lacinia sit amet blandit vehicula, molestie eu sem.</p>
-            <a href="product-1.html" title="Figurine Yoda Kenner de 1978">Voir l'article</a>
+            <a href="product-1.html" title="Figurine Yoda Kenner de 1978" class="boutonSimple" >Voir l'article</a>
           </article>
           <article class="productArticle">
-            <img src="img/GeForce-RTX-3080Ti-mini.jpg" alt="Photo de la GeForce RTX 3080Ti">
-            <div class="infoProd">
-              <h3>GeForce RTX 3080 Ti</h3>
-              <p>1280€14</p>
+            <div class="headProduct">
+              <img src="img/GeForce-RTX-3080Ti-mini.jpg" alt="Photo de la GeForce RTX 3080Ti">
+              <div class="infoProd">
+                <h3>GeForce RTX 3080 Ti</h3>
+                <p>1280€14</p>
+              </div>
             </div>
             <p class="descriProd">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel egestas orci, vitae <strong>dapibus</strong> sapien. Nam imperdiet mauris eget mi posuere venenatis. Suspendisse euismod ligula in sem accumsan fringilla. Morbi eu pulvinar velit. Fusce ullamcorper efficitur nulla, non ullamcorper lorem tincidunt convallis. Curabitur quis vestibulum tortor, nec porta risus. Cras laoreet facilisis ex id tempus. Sed elementum pulvinar eleifend. Donec lacus enim, gravida sed dapibus quis, dapibus quis tellus. Pellentesque volutpat sit amet erat eu laoreet. Aenean dui leo, feugiat id enim non, facilisis auctor turpis. Etiam posuere, nisl id suscipit imperdiet, urna velit euismod felis, id gravida enim est in magna. Aenean libero velit, lacinia sit amet blandit vehicula, molestie eu sem.</p>
-            <a href="product-2.html" title="Carte Vidéo GeForce RTX 3080 Ti">Voir l'article</a>
+            <a href="product-2.html" title="Carte Vidéo GeForce RTX 3080 Ti" class="boutonSimple" >Voir l'article</a>
           </article>
           <article class="productArticle">
-            <img src="img/hitchhiker_s_guide_to_the_galaxy-replica-mini.jpg" alt="Photo du Guide du Voyageur Intergalactique">
-            <div class="infoProd">
-              <h3>Le Guide du Voyageur Intergalactique</h3>
-              <p>420€42</p>
+            <div class="headProduct">
+              <img src="img/hitchhiker_s_guide_to_the_galaxy-replica-mini.jpg" alt="Photo du Guide du Voyageur Intergalactique">
+              <div class="infoProd">
+                <h3>Le Guide du Voyageur Intergalactique</h3>
+                <p>420€42</p>
+              </div>
             </div>
             <p class="descriProd">Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipiscing elit. Ut vel egestas orci, vitae dapibus sapien. Nam imperdiet mauris eget mi posuere venenatis. Suspendisse euismod ligula in sem accumsan fringilla. Morbi eu pulvinar velit. Fusce ullamcorper efficitur nulla, non ullamcorper lorem tincidunt convallis. Curabitur quis vestibulum tortor, nec porta risus. Cras laoreet facilisis ex id tempus. Sed elementum pulvinar eleifend. Donec lacus enim, gravida sed dapibus quis, dapibus quis tellus. Pellentesque volutpat sit amet erat eu laoreet. Aenean dui leo, feugiat id enim non, facilisis auctor turpis. Etiam posuere, nisl id suscipit imperdiet, urna velit euismod felis, id gravida enim est in magna. Aenean libero velit, lacinia sit amet blandit vehicula, molestie eu sem.</p>
-            <a href="product-3.html" title="Le Guide du Voyageur Intergalactique">Voir l'article</a>
+            <a href="product-3.html" title="Le Guide du Voyageur Intergalactique" class="boutonSimple" >Voir l'article</a>
           </article>
         </div>
       </div>
