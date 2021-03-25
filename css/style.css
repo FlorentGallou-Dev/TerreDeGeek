@@ -164,7 +164,7 @@ a.boutonSimple {
 }
 /* /\ BOUTONS /\ */
 /* \/ LIMIT TEXT LENGTH \/ */
-main p {
+main #articleList p {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
@@ -196,15 +196,44 @@ main p {
 #articleList{
     padding: 0 2vh;
 }
-#articleList, #articleList .productArticle {
+#articleList, #articleList .productArticle, #aboutImgTxt, #aboutImgTxt .aboutTxt, #productAlone .product, #detailsProduit, #galerie{
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 1vh 0;
 }
+#aboutImgTxt, #aboutImgTxt .aboutTxt{
+    align-items: center;
+    text-align: justify;
+    padding: 0 2vh;
+}
 #articleList .productArticle{
     border: 3px solid var(--blue);
 }
+#productAlone .product{
+    flex-direction: column-reverse;
+}
+#detailsProduit{
+    margin: 1vh 2vh;
+}
+#detailsProduit p{
+    text-align: justify;
+}
+#detailsProduit ul, #detailsProduit .prixProd p{
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--blue);
+    padding: 0;
+}
+#detailsProduit ul{
+    color: initial;
+}
+#galerie{
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 #articleList .headProduct{
     display: flex;
     flex-direction: column;
