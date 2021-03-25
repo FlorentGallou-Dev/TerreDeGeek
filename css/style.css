@@ -210,30 +210,6 @@ main #articleList p {
 #articleList .productArticle{
     border: 3px solid var(--blue);
 }
-#productAlone .product{
-    flex-direction: column-reverse;
-}
-#detailsProduit{
-    margin: 1vh 2vh;
-}
-#detailsProduit p{
-    text-align: justify;
-}
-#detailsProduit ul, #detailsProduit .prixProd p{
-    text-align: center;
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: var(--blue);
-    padding: 0;
-}
-#detailsProduit ul{
-    color: initial;
-}
-#galerie{
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
 #articleList .headProduct{
     display: flex;
     flex-direction: column;
@@ -264,6 +240,31 @@ main #articleList p {
     text-align: justify;
 }
 /* /\ top product list /\ */
+/* \/ single product page \/ */
+#productAlone .product{
+    flex-direction: column-reverse;
+}
+#detailsProduit{
+    margin: 1vh 2vh;
+}
+#detailsProduit p{
+    text-align: justify;
+}
+#detailsProduit ul, #detailsProduit .prixProd p{
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--blue);
+    padding: 0;
+}
+#detailsProduit ul{
+    color: initial;
+}
+#galerie{
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+/* /\ single product page /\ */
 /*~~~ /\ MAIN /\ ~~~*/
 
 /*~~~ \/ FOOTER \/ ~~~*/
@@ -293,11 +294,117 @@ footer a {
 /*~~~~~~~~~~~~~~ TOUCHPADS CSS ~~~~~~~~~~~~~~*/
 
 @media screen and (min-width: 769px) {
-    body{
+    body, nav{
         background-image: url("../img/tile_bg.jpg");
         background-size: contain;
+        background-attachment: fixed;
     }
- 
+
+    /*~~~ \/ HEADER \/ ~~~*/
+    header{
+        height: 18vh;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    #logo figure{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    header figure img{
+        position: relative;
+        top: 0px;
+        transition: all 0.3s ease-in-out;
+    }
+    header figure img:hover{
+        top: -5px;
+    }
+
+    /* \/ NAV BAR \/ */
+    nav {
+        position: relative;
+    bottom: -1px;
+    }
+    .navbar-inverse {
+        border: none;
+    }
+    .container>.navbar-collapse, .container, .container>.navbar-header {
+        width: auto;
+    }
+    .container>.navbar-header{
+        display: none;
+    }
+
+    .navbar-inverse .navbar-nav>li>a {
+        color: var(--grey);
+        text-shadow: none;
+    }
+    /* /\ NAV BAR /\ */
+    /*~~~ /\ HEADER /\ ~~~*/
+
+    /*~~~ \/ MAIN \/ ~~~*/
+    main{
+        padding: 2vh 2vw;
+    }
+
+    /* \/ shop info article \/ */
+    #imgTxtButton .blockImgTxtButton{
+        flex-direction: row;
+        justify-content:normal;
+    }
+
+    #imgTxtButton .img, #imgTxtButton .txtButton{
+        flex: 1;
+    }
+    #imgTxtButton .img{
+        text-align: center;
+    }
+    imgTxtButton .img a{
+        display: inline-block;
+        text-align: center;
+    }
+    /* /\ shop info article /\ */
+
+    /* \/ top product list \/ */
+    #articleList{
+        padding: 0 2vh;
+    }
+    #articleList{
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #articleList .productArticle{
+        margin: 0 1vh;
+    }
+    /* /\ top product list /\ */
+
+    /* \/ single product page \/ */
+    #productAlone .product{
+        flex-direction: row;
+    }
+    #galerie, #detailsProduit{
+        flex: 1;
+    }
+    #galerie figure{
+        width: 50%;
+    }
+    #detailsProduit h2, #detailsProduit h4, #detailsProduit ul, #detailsProduit .prixProd p{
+        text-align: left;
+    }
+    #detailsProduit ul, #detailsProduit .prixProd p{
+        padding-left: 2vh;
+    }
+    /* /\ single product page /\ */
+    /*~~~ /\ MAIN /\ ~~~*/
+
+    /*~~~ \/ FOOTER \/ ~~~*/
+    footer{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+    /*~~~ /\ FOOTER /\ ~~~*/
 }
 
 /*~~~~~~~~~~~~~~ DESKTOPS CSS ~~~~~~~~~~~~~~*/
@@ -316,6 +423,9 @@ footer a {
     /* /\ BOUTONS /\ */
 
     /* \/ FOOTER BONUS \/ */
+    footer{
+        overflow: hidden;
+    }
     footer:hover #edBoon {
         bottom: 0px;
         right: 0px;
