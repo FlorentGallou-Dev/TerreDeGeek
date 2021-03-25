@@ -23,6 +23,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
   <!--SHEETS AND SCRIPTS FOR NAV HAMBURGER MENU-->
 
+  <!--SHEETS AND SCRIPTS FOR NAV HAMBURGER MENU-->
+  <script src="https://kit.fontawesome.com/1219d1b540.js" crossorigin="anonymous"></script>
+
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/style.css">
@@ -43,11 +46,8 @@
       <div class="container">
         <div class="navbar-header"><!--hamburder menu-->
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
+            <i class="fas fa-bars"></i>
+          </button>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"><!--classic menu-->
           <ul class="nav navbar-nav">
@@ -60,12 +60,14 @@
     </nav>
   </header>
   
-  <div id="main">
+  <main>
     <section>
-      <article class="aboutImgTxt">
+      <article id="aboutImgTxt">
         <h1>A propos des magasins Terre de Geek</h1>
         <h2>L'histoire épique de notre quête</h2>
-        <div class="aboutImg"></div><!--block used to put a picture in background better control of the pic-->
+        <div class="img">
+          <a href="img/terreDeGeek-shop.jpg" ><img src="img/terreDeGeek-shop-mini.jpg" alt="Photo du magasin Terre de Geek" title="Magasin Terre de Geek" /></a>
+        </div>
         <div class="aboutTxt">
           <p>Né de l'idée originale du simple plaisir de se retrouver entre passionnés de <strong>multimédia</strong> et culture Geek, <strong>Terre de Geek</strong> est un condencé de plaisirs simples que sont bon goûts, fluidité et designs des années 80-90.</p>
           <h3>Take this it might be helpfull on your way...</h3>
@@ -81,7 +83,7 @@
         </div>
       </article>
     </section>
-  </div>
+  </main>
 
   <footer>
     <div id="infosFT"><!--Site legal name and year footer-->
