@@ -140,6 +140,7 @@ nav .fa-bars {
 .navbar-inverse .navbar-nav>li>a {
     color: var(--white);
     text-shadow: var(--textShadow);
+    transition: all 0.5s ease-out;
 }
 /* /\ NAV BAR /\ */
 /*~~~ /\ HEADER /\ ~~~*/
@@ -346,6 +347,10 @@ footer a {
     main{
         padding: 2vh 2vw;
     }
+    main h2, main h1 {
+        margin-top: 5vh;
+        margin-bottom: 10vh;
+    }
 
     /* \/ shop info article \/ */
     #imgTxtButton .blockImgTxtButton{
@@ -409,23 +414,84 @@ footer a {
 
 /*~~~~~~~~~~~~~~ DESKTOPS CSS ~~~~~~~~~~~~~~*/
 @media screen and (min-width: 1280px) {
-     
+    /*~~~ \/ HEADER \/ ~~~*/
+    /* \/ NAV BAR \/ */
+    .navbar-inverse .navbar-nav>li>a:hover {
+        color: var(--white);
+        background-color: #0093F788;
+    }
+    /* /\ NAV BAR /\ */
+    /*~~~ /\ HEADER /\ ~~~*/
+
+    /*~~~ \/ MAIN \/ ~~~*/
+    main {
+        padding-bottom: 0px;
+    }
+    main section{
+        padding-top: 1px;
+        padding-bottom: 2vh;
+        border-radius: 2vh 2vh 0 0;
+        background-color: var(--greyBackground);
+    }
     /* \/ BOUTONS \/ */
     a.boutonSimple {
-        color: var(--blue);
+        color: var(--white);
+        border-color: var(--white);
         background-color: transparent;
         transition: all 0.3s ease-out;
     }
     a.boutonSimple:hover {
         color: var(--white);
+        border-color: var(--blue);
         background-color: var(--blue);
     }
     /* /\ BOUTONS /\ */
 
-    /* \/ FOOTER BONUS \/ */
+    /* \/ shop info article \/ */
+    main p{
+        color: var(--white);
+    }
+    #imgTxtButton .txtButton {
+        align-items: flex-start;
+        padding-right: 3vh;
+    }
+    /* /\ shop info article /\ */
+
+    /* \/ top product list \/ */
+    #articleList .productArticle{
+        position: relative;
+        top: 0px;
+        background-color: var(--greyBackground);
+        transition: all 0.3s ease-out;
+    }
+    #articleList .productArticle:hover{
+        top: -5px;
+    }
+    #articleList a{
+        border: 2px solid var(--blue);
+    }
+    /* /\ top product list /\ */
+
+    /* \/ single product page \/ */
+    #galerie{
+        padding-left: 3vh;
+    }
+    /* /\ single product page /\ */
+    /*~~~ /\ MAIN /\ ~~~*/
+
+    /*~~~ \/ FOOTER \/ ~~~*/
     footer{
         overflow: hidden;
     }
+    footer #sitemapFT a{
+        text-decoration: none;
+        transition: all 0.3s ease-out;
+    }
+    footer #sitemapFT a:hover{
+        color: var(--white);
+    }
+
+    /* \/ BONUS \/ */
     footer:hover #edBoon {
         bottom: 0px;
         right: 0px;
@@ -438,5 +504,6 @@ footer a {
         right: -150px;
         transition: all 0.3s ease-out;
     }
-    /* /\ FOOTER BONUS /\ */
+    /* /\ BONUS /\ */
+    /*~~~ /\ FOOTER /\ ~~~*/
 }
