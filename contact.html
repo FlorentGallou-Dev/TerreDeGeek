@@ -65,25 +65,42 @@
   
   <main>
     <section>
-      <article id="aboutImgTxt">
-        <h1>A propos des magasins Terre de Geek</h1>
-                <div class="img">
-          <iframe src="https://www.youtube.com/embed/-NzxJGvZzeQ?autoplay=1&mute=1&loop=1"></iframe>
-        </div>
-        <h2>L'histoire épique de notre quête</h2>
-        <div class="aboutTxt">
-          <p>Né de l'idée originale du simple plaisir de se retrouver entre passionnés de <strong>multimédia</strong> et culture Geek, <strong>Terre de Geek</strong> est un condencé de plaisirs simples que sont bon goûts, fluidité et designs des années 80-90.</p>
-          <h3>Take this it might be helpfull on your way...</h3>
-          <p>Lorem ipsum <strong>dolor</strong> sit amet, consectetur adipiscing elit. Nunc malesuada facilisis consequat. Morbi ornare tincidunt ligula, at accumsan orci dapibus nec. Sed feugiat molestie ex, vitae tincidunt sem faucibus eu. Donec ultrices sapien in consectetur molestie. Praesent sem sem, lobortis facilisis tincidunt in, aliquet a urna. Aenean tristique ullamcorper placerat. Maecenas sagittis suscipit erat, vel pulvinar ligula fermentum pharetra.</p>
-          <h3>The cake is a lie !!!</h3>
-          <p>Fusce dignissim diam ac ultrices pretium. Nunc in sem varius, consectetur elit et, sodales enim. Nam felis elit, faucibus ut porta at, vulputate ac mi. Pellentesque ac ligula et libero mollis euismod. Vivamus sit amet libero lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque nec nisl risus. Mauris non ipsum condimentum, sodales enim pellentesque, ultrices purus.</p>
-          <h3>Watch out jill, there's a double crosser !</h3>
-          <p>Aenean nulla erat, rhoncus eget dui sed, venenatis pretium est. Sed id tempor eros. Nam ipsum ex, auctor quis est blandit, <strong>consectetur</strong> posuere mi. Sed efficitur id est at feugiat. Quisque velit nulla, pellentesque non nibh sed, porttitor luctus felis. Pellentesque nunc purus, accumsan vel mauris non, rutrum tempor neque. Etiam volutpat massa lectus. Praesent ac congue urna.</p>
-          <h3>N'oubliez jamais votre serviette.</h3>
-          <p>Vestibulum ultricies nunc eu dignissim consequat. Fusce aliquet lacus <strong>tortor</strong>, vitae scelerisque diam blandit a. Cras egestas lorem ac arcu fringilla, in vestibulum dui sodales. Aenean pellentesque ligula sed semper suscipit. Sed a nisl diam. Nullam bibendum ullamcorper scelerisque. Nulla facilisi. Vivamus a mollis purus, sit amet tincidunt eros. Integer malesuada hendrerit viverra. Vestibulum molestie, purus sit amet suscipit lobortis, sapien erat laoreet est, id sagittis arcu nunc mollis odio. Vestibulum sodales sodales metus, in feugiat lorem faucibus ut. Morbi condimentum interdum fermentum. Aenean in urna facilisis, ultricies diam non, posuere dolor. Nunc posuere nisl et sagittis finibus.</p>
-          <h3>Thank you, but your princess is in another castle...</h3>
-          <p>Donec quis nisl id leo mattis viverra ut quis turpis. Donec felis justo, varius non blandit et, ultrices nec odio. Etiam in pharetra justo. Pellentesque lobortis quam vel ligula convallis efficitur. Suspendisse nec odio at diam interdum feugiat. Morbi hendrerit lacus eget augue eleifend consequat et non quam. In posuere lacinia nunc sed malesuada. Ut et nisl eu justo ultrices pretium.</p>
-        </div>
+      <article id="contact">
+        <h1>Contacter Terre de Geek</h1>
+        <form method="post" action="send.php">
+          <fieldset>
+            <legend>Vous</legend>
+            <label for="lastname">Votre Nom :</label>
+            <input class="space" type="text" name="lastname" id="lastname" placeholder="Brown" size="40" minlength="2" maxlength="40" required/>
+            <label for="firstname">Votre Prénom :</label>
+            <input class="space" type="text" name="firstname" id="firstname" placeholder="Emmet" size="40" minlength="2" maxlength="40"/>
+            <label for="phone">Votre téléphone :</label>
+            <input class="space" type="tel" name="phone" id="phone" pattern="[0-9]{10}" size="14" placeholder="0608865577" maxlength="14" />
+            <label for="email">Votre e-mail :</label>
+            <input class="space" type="email" name="email" id="email" placeholder="whoyagonnacall@ghostbuster.com" size="30" maxlength="30" required/>
+            <p class="space age" >
+              Votre tranche d'âge :<br /><br />
+              <input type="radio" name="age" id="15-25" /> <label for="15-25">15-25 ans</label><br />
+              <input type="radio" name="age" id="26-35" /> <label for="26-35">26-35 ans</label><br />
+              <input type="radio" name="age" id="36-45" /> <label for="36-45">36-45 ans</label><br />
+              <input type="radio" name="age" id="46-55" /> <label for="46-55">46-55 ans</label><br />
+              <input type="radio" name="age" id="56" /> <label for="56">56 ans et plus</label>
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend>Votre demande</legend>
+            <label for="reason">Objet :</label>
+            <select class="space" name="reason" id="reason" required>
+                <option value="informations" selected>Demande d'informations.</option>
+                <option value="claim">Réclamation</option>
+                <option value="partnership">Partenariat</option>
+                <option value="other">autre...</option>
+            </select>
+            <label for="message">Votre message :</label>
+            <textarea class="space" name="message" id="message" placeholder="Bonjour mr phelps. votre mission si toutefois vous l'acceptez..." size="250" maxlength="2000" required></textarea>
+          </fieldset>
+          <input type="submit" value="Envoyer" />
+        </form>
       </article>
     </section>
   </main>

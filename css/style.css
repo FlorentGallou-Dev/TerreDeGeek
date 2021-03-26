@@ -12,8 +12,16 @@
 /*~~~~~~~~~~~~~~ FONTS ~~~~~~~~~~~~~~*/
 
 h1, h2, h3, h4, h5, h6, p, a, span, li{
-    font-family: Arial, sans-serif;
     word-break: break-word;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Comfortaa', Arial, sans-serif;
+}
+
+p, a, span, li, label, input, legend, option, textarea{
+    font-family: 'Ubuntu', Arial, sans-serif;
+
 }
 
 h1{
@@ -40,8 +48,9 @@ h6{
     font-size: 1rem;
 }
 
-p, a, span, li{
+p, a, span, li, label, input, legend, option, textarea{
     font-size: 1rem;
+    color: var(--grey);
 }
 
 li{
@@ -192,7 +201,15 @@ main #articleList p {
     text-align: justify;
 }
 /* /\ shop info article /\ */
-
+/* \/ about page \/ */
+#aboutImgTxt .img {
+    height: 14vh;
+}
+#aboutImgTxt iframe {
+    height: inherit;
+    width: 25vh;
+}
+/* /\ about page /\ */
 /* \/ top product list \/ */
 #articleList{
     padding: 0 2vh;
@@ -266,6 +283,55 @@ main #articleList p {
     flex-wrap: wrap;
 }
 /* /\ single product page /\ */
+
+/* \/ contact page \/ */
+#contact form{
+    display: flex;
+    flex-direction: column;
+    padding: 2vh 2vh;
+}
+#contact fieldset{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+#contact fieldset .space{
+    margin-bottom: 2vh;
+}
+#contact legend{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--white);
+    text-shadow: var(--textShadow);
+}
+#contact input, #contact textarea{
+    width: -webkit-fill-available;
+}
+#contact textarea{
+    height: 15vh;
+}
+#contact p{
+    color: var(--grey);
+    font-weight: 700;
+}
+#contact .age input{
+    margin-left: 2vh;
+    width: auto;
+}
+#contact input[type="submit"]{
+    display: block;
+    width: 10vh;
+    margin-left: auto;
+    color: var(--white);
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid var(--blue);
+    padding: 1vh;
+    background-color: var(--blue);
+}
+
+/* /\ contact page /\ */
 /*~~~ /\ MAIN /\ ~~~*/
 
 /*~~~ \/ FOOTER \/ ~~~*/
@@ -370,6 +436,16 @@ footer a {
     }
     /* /\ shop info article /\ */
 
+    /* \/ about page \/ */
+    #aboutImgTxt .img {
+        height: 34vh;
+    }
+    #aboutImgTxt iframe {
+        height: inherit;
+        width: 60vh;
+    }
+    /* /\ about page /\ */
+
     /* \/ top product list \/ */
     #articleList{
         padding: 0 2vh;
@@ -401,6 +477,18 @@ footer a {
         padding-left: 2vh;
     }
     /* /\ single product page /\ */
+
+    /* \/ contact page \/ */
+    #contact form{
+        margin: auto;
+    }
+    #contact input{
+        width: initial;
+    }
+    #contact textarea{
+        width: 80%;
+    }
+    /* /\ contact page /\ */
     /*~~~ /\ MAIN /\ ~~~*/
 
     /*~~~ \/ FOOTER \/ ~~~*/
@@ -457,6 +545,16 @@ footer a {
     }
     /* /\ shop info article /\ */
 
+    /* \/ about page \/ */
+    #aboutImgTxt .img {
+        height: 50vh;
+    }
+    #aboutImgTxt iframe {
+        height: inherit;
+        width: 90vh;
+    }
+    /* /\ about page /\ */
+
     /* \/ top product list \/ */
     #articleList .productArticle{
         position: relative;
@@ -476,7 +574,29 @@ footer a {
     #galerie{
         padding-left: 3vh;
     }
+    #galerie figure{
+        width: auto;
+    }
     /* /\ single product page /\ */
+
+    /* \/ contact page \/ */
+    #contact form {
+        width: 50%;
+    }
+    #contact p, #contact label{
+        color: var(--white);
+    }
+    #contact input[type="submit"]{
+        color: var(--white);
+        border: 1px solid var(--white);
+        background-color: transparent;
+        transition: all 0.3s ease-out;
+    }
+    #contact input[type="submit"]:hover{
+        border: 1px solid var(--blue);
+        background-color: var(--blue);
+    }
+    /* /\ contact page /\ */
     /*~~~ /\ MAIN /\ ~~~*/
 
     /*~~~ \/ FOOTER \/ ~~~*/
