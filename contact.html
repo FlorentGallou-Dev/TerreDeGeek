@@ -27,7 +27,7 @@
   <script src="https://kit.fontawesome.com/1219d1b540.js" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
-  
+
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/style.css">
@@ -64,45 +64,44 @@
     </nav>
   </header>
   
-  <main><!--Same page for all articles refer to product-1 page for info-->
+  <main>
     <section>
-      <article id="productAlone">
-        <h1>Figurine Yoda Kenner de 1978</h1>
-        <div class="product">
-            <div id="galerie"><!--galery easy to flex-->
-              <figure class="productPic">
-                <a href="img/yoda-kenner-1978-boxed-front.jpg" ><img src="img/yoda-kenner-1978-boxed-front-mini.jpg" alt="Photo de face de la boite de la figurine Yoda Kenner 1978" title="Photo de face de la boite de la figurine Yoda Kenner 1978" /></a>
-              </figure>
-              <figure class="productPic">
-                <a href="img/yoda-kenner-1978-boxed-side.jpg" ><img src="img/yoda-kenner-1978-boxed-side-mini.jpg" alt="Photo de coté de la boite de la figurine Yoda Kenner 1978" title="Photo de coté de la boite de la figurine Yoda Kenner 1978" /></a>
-              </figure>
-              <figure class="productPic">
-                <a href="img/yoda-kenner-1978-boxed-back.jpg" ><img src="img/yoda-kenner-1978-boxed-back-mini.jpg" alt="Photo de dos de la boite de la figurine Yoda Kenner 1978" title="Photo de dos de la boite de la figurine Yoda Kenner 1978" /></a>
-              </figure>
-              <figure class="productPic">
-                <a href="img/yoda-kenner-1978.jpg" ><img src="img/yoda-kenner-1978-mini.jpg" alt="Photo de la figurine Yoda Kenner 1978" title="Photo de la figurine Yoda Kenner 1978" /></a>
-              </figure>
-            </div>
-            <div id="detailsProduit"><!--side info next to the galery-->
-              <h2>Vintage Star Wars 1978 Empire Strikes Back Yoda - By Kenner</h2>
-              <div class="infoPrix"><!--block to contain text and prices infos flexible-->
-                <div class="detailsProd"><!--block to contain all text infos flexible-->
-                  <h4>Description :</h4>
-                  <p class="descriProd">Lorem ipsum dolor sit amet, consectetur <strong>adipiscing</strong> elit. Ut vel egestas orci, vitae dapibus sapien. Nam imperdiet mauris eget mi posuere venenatis. Suspendisse euismod ligula in sem accumsan fringilla. Morbi eu pulvinar velit. Fusce ullamcorper efficitur nulla, non ullamcorper lorem tincidunt convallis. Curabitur quis vestibulum tortor, nec porta risus. Cras laoreet facilisis ex id tempus. Sed elementum pulvinar eleifend. Donec lacus enim, gravida sed dapibus quis, dapibus quis tellus. Pellentesque volutpat sit amet erat eu laoreet. Aenean dui leo, feugiat id enim non, facilisis auctor turpis. Etiam posuere, nisl id suscipit imperdiet, urna velit euismod felis, id gravida enim est in magna. Aenean libero velit, lacinia sit amet blandit vehicula, molestie eu sem.</p>
-                  <h4>points forts :</h4>
-                  <ul>
-                    <li>Vintage,</li>
-                    <li>Recherché,</li>
-                    <li>État neuf.</li>
-                  </ul>
-                </div>
-                <div class="prixProd"><!--block to contain price info flexible next to the text block-->
-                  <h4>Prix :</h4>
-                  <p>59€99</p>
-                </div>
-              </div>
-            </div>
-        </div>
+      <article id="contact">
+        <h1>Contacter Terre de Geek</h1>
+        <form method="post" action="send.php">
+          <fieldset>
+            <legend>Vous</legend>
+            <label for="lastname">Votre Nom :</label>
+            <input class="space" type="text" name="lastname" id="lastname" placeholder="Brown" size="40" minlength="2" maxlength="40" required/>
+            <label for="firstname">Votre Prénom :</label>
+            <input class="space" type="text" name="firstname" id="firstname" placeholder="Emmet" size="40" minlength="2" maxlength="40"/>
+            <label for="phone">Votre téléphone :</label>
+            <input class="space" type="tel" name="phone" id="phone" pattern="[0-9]{10}" size="14" placeholder="0608865577" maxlength="14" />
+            <label for="email">Votre e-mail :</label>
+            <input class="space" type="email" name="email" id="email" placeholder="whoyagonnacall@ghostbuster.com" size="30" maxlength="30" required/>
+            <p class="space age" >
+              Votre tranche d'âge :<br /><br />
+              <input type="radio" name="age" id="15-25" /> <label for="15-25">15-25 ans</label><br />
+              <input type="radio" name="age" id="26-35" /> <label for="26-35">26-35 ans</label><br />
+              <input type="radio" name="age" id="36-45" /> <label for="36-45">36-45 ans</label><br />
+              <input type="radio" name="age" id="46-55" /> <label for="46-55">46-55 ans</label><br />
+              <input type="radio" name="age" id="56" /> <label for="56">56 ans et plus</label>
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend>Votre demande</legend>
+            <label for="reason">Objet :</label>
+            <select class="space" name="reason" id="reason" required>
+                <option value="informations" selected>Demande d'informations.</option>
+                <option value="claim">Réclamation</option>
+                <option value="partnership">Partenariat</option>
+                <option value="other">autre...</option>
+            </select>
+            <label for="message">Votre message :</label>
+            <textarea class="space" name="message" id="message" placeholder="Bonjour mr phelps. votre mission si toutefois vous l'acceptez..." size="250" maxlength="2000" required></textarea>
+          </fieldset>
+          <input type="submit" value="Envoyer" />
+        </form>
       </article>
     </section>
   </main>
