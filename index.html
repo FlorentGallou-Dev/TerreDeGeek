@@ -56,6 +56,7 @@
             <li><a href="index.html" title="Accueil de Terre de Geek">Home</a></li>
             <li><a href="about.html" title="Histoire de Terre de Geek">À propos</a></li>
             <li><a href="products.html" title="Liste des produits de Terre de Geek">Produits</a></li>
+            <li><a href="prestations.html" title="Liste des prestations de Terre de Geek">Prestations</a></li>
             <li><a href="contact.html" title="Contacter Terre de Geek">Contact</a></li>
           </ul>
         </div>
@@ -120,7 +121,7 @@
     </section>
   </main>
 
-  <footer>
+  <footer id="foot">
     <div id="infosFT"><!--Site legal name and year footer-->
       <p>Terre de Geek - 2021</p>
     </div>
@@ -130,6 +131,7 @@
         <li><a href="index.html" title="Accueil de Terre de Geek">Home</a></li>
         <li><a href="about.html" title="Histoire de Terre de Geek">À propos</a></li>
         <li><a href="products.html" title="Liste des produits de Terre de Geek">Produits</a></li>
+        <li><a href="prestations.html" title="Liste des prestations de Terre de Geek">Prestations</a></li>
         <li><a href="contact.html" title="Contacter Terre de Geek">Contact</a></li>
         <li><a href="legals.html" title="Mentions légales de Terre de Geek">Mentions Légales</a></li>
       </ul>
@@ -141,10 +143,18 @@
       <p>quicestquonappelle@terredegeek.fr</p>
     </div>
     <img id="edBoon" src="img/edboon.png" alt="Toasty">
+    <audio id="ebToasty" src="sound/toasty.mp3" preload="auto"></audio>
   </footer>
+  <script>
+    var toasty = $("#ebToasty")[0];
+    $("#foot")
+      .mouseover(function() {
+        ebToasty.play();
+      });
+  </script>
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/main.js" ></script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>

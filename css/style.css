@@ -19,9 +19,8 @@ h1, h2, h3, h4, h5, h6{
     font-family: 'Comfortaa', Arial, sans-serif;
 }
 
-p, a, span, li, label, input, legend, option, textarea{
+p, a, span, li, label, input, legend, option, textarea, th, td, figcaption{
     font-family: 'Ubuntu', Arial, sans-serif;
-
 }
 
 h1{
@@ -48,7 +47,7 @@ h6{
     font-size: 1rem;
 }
 
-p, a, span, li, label, input, legend, option, textarea{
+p, a, span, li, label, input, legend, option, textarea, th, td, figcaption{
     font-size: 1rem;
     color: var(--grey);
 }
@@ -284,6 +283,30 @@ main #articleList p {
 }
 /* /\ single product page /\ */
 
+/* \/ prestation page \/ */
+#prestations table{
+    display: flex;
+    justify-content: center;
+}
+#prestations th, #prestations figcaption{
+    color: var(--white);
+    text-shadow: var(--textShadow);
+    font-size: 1.2rem;
+}
+#prestations td{
+    font-weight: bold;
+}
+#prestations th, #prestations td{
+     padding: 2vw;
+}
+#prestations .right{
+    text-align: right;
+}
+#prestations .center{
+    text-align: center;
+}
+/* /\ prestation page /\ */
+
 /* \/ contact page \/ */
 #contact form{
     display: flex;
@@ -344,6 +367,9 @@ footer{
     align-items: center;
     background: var(--grey);
     text-align: center;
+    color: var(--white);
+}
+footer p{
     color: var(--white);
 }
 footer ul{
@@ -578,6 +604,12 @@ footer a {
         width: auto;
     }
     /* /\ single product page /\ */
+
+    /* \/ prestation page \/ */
+    #prestations td{
+        color: var(--white);
+    }
+    /* /\ prestation page /\ */
 
     /* \/ contact page \/ */
     #contact form {
